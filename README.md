@@ -32,3 +32,7 @@ https://fonts.google.com/specimen/Frank+Ruhl+Libre
     CREACION DE LOGO
 
     EL LOGO TODAVIA ESTA EN DISEÑO
+
+
+ FIGMA
+ https://www.figma.com/file/zWBSSwSvVoxkhdd4oSdnuH/proyecto1?node-id=0%3A1
