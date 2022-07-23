@@ -1,0 +1,29 @@
+@import url(https://fonts.google.com/specimen/Frank+Ruhl+Libre);
+*{
+    margin: 0px;
+    padding: 0px;
+
+}
+header{
+    margin: 0px;
+    padding: 2px;
+    background-color: #0C4CF2;
+}
+.cabecera-principal{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+       
+}
+
+.links{
+    display: flex;
+    justify-content: space-between;
+    
+
+}
+
+.links li{
+    list-style: none;
+    
+}
