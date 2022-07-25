@@ -2,10 +2,50 @@
 *{
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 
 }
+/* mobile first */
+
+@media(max-width:500px)and (orientation:portrait){
+    header nav {
+        width: auto;
+        margin: 5px auto;
+    }
+    header nav div{
+        margin: 0px auto;
+    }
+    
+    header nav div img{
+        margin: 0px 5px;
+        max-width: 50px;
+        max-height: 50px;
+    }
+    header nav ul li a{
+        display: none;
+    }
+    header nav div button{
+        display: none;
+    }
+    header nav .contenedor-btn-menu{
+        display: flex;
+        top:10px;
+        height: 50px;
+    } 
+    header nav .contenedor-btn-menu .btn-menu{
+        color:black;
+        text-decoration: none;
+
+        
+    }
+}
+
+
+
+
 header{
-    margin: 0px;
+    width: auto;
+    margin: 0px auto;
     padding: 2px;
     background-color: #0C4CF2;
 }
@@ -24,6 +64,10 @@ header{
 }
 
 .links li{
-    list-style: none;
-    
+    list-style: none;    
+}
+header nav ul li a{
+    text-decoration: none;
+    color: black;
+    padding: 10px;   
 }
