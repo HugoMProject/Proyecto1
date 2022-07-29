@@ -1,0 +1,69 @@
+body{
+    margin: 0px;
+    padding: 0px;
+ 
+}
+@media(max-width:750px){
+    .banner{
+        margin-top: 0px;
+        margin-bottom: 10px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        background-color: blue;
+
+    }
+    .cuerpo-banner {
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .cuerpo-banner h1{
+        font-size: 35px;
+        color: white ;
+        opacity: 95%;
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+    .cuerpo-banner p {
+        color: white;
+        font-size: 20px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+    .cuerpo-banner .botones{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 30px 10px;
+
+        }
+    .cuerpo-banner .botones button{
+        cursor: pointer;
+        background-color: white;
+        color: black;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        padding-left: 18px;
+        padding-right: 18px;
+        margin: 10px;
+        border: solid black 1px;
+        border-radius: 12px;
+
+    }
+    .cuerpo{
+    margin: 50px;
+    }
+    .cuerpo .tittle-products{
+        text-align: center;
+        font-size: 30px;
+        margin-top: 15px;
+        margin-bottom: 30px;
+
+    }
+}
