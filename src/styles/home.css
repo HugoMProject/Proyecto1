@@ -1,8 +1,13 @@
+@import url(https://fonts.google.com/specimen/Frank+Ruhl+Libre);
+
 body{
     margin: 0px;
     padding: 0px;
  
 }
+/*
+    mobile first
+*/
 @media(max-width:750px){
     .banner{
         margin-top: 0px;
@@ -54,16 +59,148 @@ body{
         margin: 10px;
         border: solid black 1px;
         border-radius: 12px;
+        font-weight: 600;
 
     }
+    /* 
+       Estamos en la parte de seccion clase cuerpo 
+    */
     .cuerpo{
     margin: 50px;
     }
-    .cuerpo .tittle-products{
+    .cuerpo h2{
         text-align: center;
         font-size: 30px;
         margin-top: 15px;
         margin-bottom: 30px;
 
+    }
+    .cuerpo .cuerpo-seccion-productos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cuerpo .cuerpo-seccion-productos .cuerpo-seccion-producto{
+        display: flex;
+        flex-direction: column;
+        align-items: center ;
+        margin-top: 80px;
+        margin-bottom: 50px;
+        
+    }
+    .cuerpo .cuerpo-seccion-productos .cuerpo-seccion-producto .div-productos{
+        background: rgba(12, 76, 242, 0.8);
+        display: flex;
+        align-items: center;
+        padding: 30px;
+        width: 235px;
+        height: 248px;
+        margin-bottom: 17.15px;
+        
+    }
+    .producto1 .div-productos h3{
+        left: 14.47%;
+        right: 14.89%;
+        top: 29.84%;
+        bottom: 33.87%;
+
+        /* font-family: 'Libre Caslon Text'; */
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 30px;
+        display: flex;
+        align-items: flex-end;
+        text-align: center;
+    }
+    .producto2 .div-productos h3{
+        left: 14.89%;
+        right: 16.6%;
+        top: 21.77%;
+        bottom: 45.97%;
+        padding: 34px;
+
+        font-family: 'Libre Caslon Text';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 30px;
+        display: flex;
+        align-items: flex-end;
+        text-align: center;
+    }
+    .producto3 .div-productos h3{
+        left: 19.57%;
+        right: 19.57%;
+        top: 23.39%;
+        bottom: 51.21%;
+        padding: 40px;
+
+        font-family: 'Libre Caslon Text';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 30px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+
+    .cuerpo-seccion-producto .div-btn{
+        right: 1.22%;
+        bottom: 0%;
+        width:227.84px ;
+        height:34.3px ;
+        left:213.7px ;
+        top: 4.3px;
+        display: flex;
+        flex-direction: row;
+        align-items: center ;
+        justify-content: space-evenly;
+    }
+    .cuerpo-seccion-producto .div-btn button{
+        cursor: pointer;
+        left: 1.83%;
+        right: 51.22%;
+        top: 86.17%;
+        bottom: 0%;
+        background: rgba(12, 76, 242, 0.8);
+        border-radius: 15px;
+        padding-left: 20px;
+        padding-right:20px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        text-transform: capitalize;
+        font-family: inherit;
+        font-style: normal;
+        font-weight: 600;
+        font-size:medium;
+        line-height: 15px;
+
+    }
+
+    /* 
+    estamos en la seccion de preguntas frecuentes
+    */
+
+    .cuerpo .cuerpo-seccion-preguntas{
+        display: flex;
+        flex-direction: column;
+        align-items:center ;
+        text-align: center;
+
+    }
+    .cuerpo .cuerpo-seccion-preguntas p {
+        display: none;
+    }
+    .cuerpo-seccion-preguntas .cuerpo.seccion-pregunta{
+       
+        width: 246px;
+        height: 158px;
+        left: 38px;
+        top: 242px;
+
+        background: rgba(12, 76, 242, 0.8);
     }
 }
