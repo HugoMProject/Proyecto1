@@ -3,7 +3,7 @@
 body{
     margin: 0px;
     padding: 0px;
- 
+    
 }
 /*
     mobile first
@@ -14,7 +14,10 @@ body{
         margin-bottom: 10px;
         padding-top: 50px;
         padding-bottom: 50px;
-        background-color: blue;
+        background-image: url('../../imagenes/fondo-de-baner2.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
 
     }
     .cuerpo-banner {
@@ -52,10 +55,10 @@ body{
         cursor: pointer;
         background-color: white;
         color: black;
-        padding-top: 3px;
-        padding-bottom: 3px;
-        padding-left: 18px;
-        padding-right: 18px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 19px;
+        padding-right: 19px;
         margin: 10px;
         border: solid black 1px;
         border-radius: 12px;
@@ -63,7 +66,8 @@ body{
 
     }
     /* 
-       Estamos en la parte de seccion clase cuerpo 
+       Estamos en la parte de seccion clase cuerpo
+       background: rgba(12, 76, 242, 0.8);color azul 
     */
     .cuerpo{
     margin: 50px;
@@ -90,14 +94,33 @@ body{
         
     }
     .cuerpo .cuerpo-seccion-productos .cuerpo-seccion-producto .div-productos{
-        background: rgba(12, 76, 242, 0.8);
+        
         display: flex;
         align-items: center;
         padding: 30px;
         width: 235px;
         height: 248px;
         margin-bottom: 17.15px;
+        border-radius: 20px;
         
+    }
+    .producto1 .div-productos{
+        background-image: url('../../imagenes/electronica1.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .producto2 .div-productos{
+        background-image: url('../../imagenes/electronica2.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .producto3 .div-productos{
+        background-image: url('../../imagenes/electronica3.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
     }
     .producto1 .div-productos h3{
         left: 14.47%;
@@ -113,6 +136,7 @@ body{
         display: flex;
         align-items: flex-end;
         text-align: center;
+        color:white;
     }
     .producto2 .div-productos h3{
         left: 14.89%;
@@ -129,6 +153,7 @@ body{
         display: flex;
         align-items: flex-end;
         text-align: center;
+        color: white;
     }
     .producto3 .div-productos h3{
         left: 19.57%;
@@ -145,6 +170,7 @@ body{
         display: flex;
         align-items: center;
         text-align: center;
+        color: white;
     }
 
     .cuerpo-seccion-producto .div-btn{
@@ -200,7 +226,75 @@ body{
         height: 158px;
         left: 38px;
         top: 242px;
-
-        background: rgba(12, 76, 242, 0.8);
     }
+    .cuerpo.seccion-preguntas .pregunta1 img{
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        margin-bottom: 43px;
+    }
+    .cuerpo.seccion-preguntas .pregunta2 img{
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        margin-bottom: 43px;
+    }
+    .cuerpo.seccion-preguntas .pregunta3 img{
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        margin-bottom: 43px;
+    }
+
+    /* 
+            Estamos en la seccion de Nosotros
+    */
+    .nosotros{
+        margin: 0px;
+        background-image: url('../../imagenes/persona-pensando.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .nosotros div{
+
+        display: flex;
+        flex-direction: column;
+        width: 413px;
+        height: 269px;
+        left: 0px;
+        top: 2349px;
+    }
+    .nosotros div h3{
+        height: 73px;
+        width: 297px;
+        margin-left: 10px;
+        margin-top: 0px;
+        margin-bottom: 17px;
+        font-family: inherit;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 30px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+
+    .nosotros div h5{
+        width: 207px;
+        height: 80px;
+        margin-left: 14px;
+        margin-top: 15.99px;
+        margin-bottom: 100px;
+        font-family: inherit;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 16px;
+        display: flex;
+        align-items: center;
+
+    }
+    
 }

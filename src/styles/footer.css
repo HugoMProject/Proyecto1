@@ -2,8 +2,9 @@
 
 @media(max-width:750px)and (orientation:portrait){
     footer{
-        width: auto;       
-        margin: 0px auto;
+        width: 413px;
+        height: 389px;       
+        margin: 0px;
         margin-top: 20px;
         margin-bottom: 0px;
         padding-top: 15px;
