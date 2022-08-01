@@ -77,6 +77,12 @@
         max-height: 40px;
         color: black;
     }
+    header nav .contenedor-btn-menu .btn-menu:hover{
+        background-color: transparent;
+        color: white;
+        transition: 0.5s;
+        border: white solid 1px;
+    }
 }
 /*
         Media laptop
@@ -99,8 +105,8 @@
         margin: 0px 5px;
         margin-left: -50px;
         margin-right: 100px;
-        max-width: 60px;
-        max-height: 50px;
+        max-width: 70px;
+        max-height: 60px;
         border-radius: 40px;
     }
 
@@ -123,7 +129,8 @@
     header nav ul li a:hover{
         background-color: #014ba0;
         color:white;
-        padding: 10px;   
+        padding: 10px;
+        transition: all 0.5s;   
     }
     header nav div button{
         cursor: pointer;
@@ -131,10 +138,16 @@
         color:#014ba0;
         background-color: white;
         border: solid #014ba0 2px;
-        border-radius: 9px;
-        padding: 5px;
-        padding-right:20px ;
-        padding-left:20px ;
+        border-radius: 20px;
+        padding: 7px;
+        padding-right:30px ;
+        padding-left:30px ;
+    }
+    header nav div button:hover{
+        background-color: transparent;
+        color: black;
+        border-radius: black solid 6px;
+        transition: all 0.6s;
     }
     header nav .contenedor-btn-menu{
         display: none;

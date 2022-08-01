@@ -99,8 +99,7 @@ body{
         display: flex;
         align-items: center;
         padding: 30px;
-        width: 235px;
-        height: 248px;
+        height: 190px;
         margin-bottom: 17.15px;
         border-radius: 20px;
         
@@ -122,14 +121,14 @@ body{
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        width: 200px;
+        border-radius: 20px;
     }
     .producto1 .div-productos h3{
         left: 14.47%;
         right: 14.89%;
         top: 29.84%;
         bottom: 33.87%;
-
-        /* font-family: 'Libre Caslon Text'; */
         font-style: normal;
         font-weight: 700;
         font-size: 24px;
@@ -261,7 +260,6 @@ body{
 
         display: flex;
         flex-direction: column;
-        width: 413px;
         height: 269px;
         left: 0px;
         top: 2349px;
@@ -365,6 +363,7 @@ body{
         background-color: transparent;
         color:white;
         border:white solid 1px ;
+        transition: all 0.5s;
     }
     /* 
        Estamos en la parte de seccion clase cuerpo
@@ -395,6 +394,8 @@ body{
         align-items: center ;
         margin-top: 80px;
         margin-bottom: 50px;
+        width: 280px;
+        height: 290px;
         
     }
     .cuerpo .cuerpo-seccion-productos .cuerpo-seccion-producto .div-productos{
@@ -460,10 +461,8 @@ body{
         color: white;
     }
     .producto3 .div-productos h3{
-        left: 19.57%;
-        right: 19.57%;
-        top: 23.39%;
-        bottom: 51.21%;
+        margin-left: 18px;
+        margin-right: 18px;
         padding: 40px;
 
         font-family: 'Libre Caslon Text';
@@ -510,6 +509,11 @@ body{
         margin-left: 10px;
         margin-right: 10px;
 
+    }
+    .cuerpo-seccion-producto .div-btn button:hover{
+        background-color: transparent;
+        color: rgba(12, 76, 242, 0.8);
+        transition: all 0.4s;
     }
 
     /* 

@@ -1,1 +1,156 @@
 @import url(https://fonts.google.com/specimen/Frank+Ruhl+Libre);
+body{
+    margin: 0px;
+    padding: 0px;
+
+    
+}
+@media(max-width:750px){
+     section h1{
+        margin-top: 70px;
+        margin-bottom: 40px;      
+        text-align: center;
+        font-size: 20px;
+        text-transform: uppercase;
+    }
+    section .seccion-cuerpo{
+        width: 350;
+        height: 400px;
+        margin-top: 100px;
+        margin-bottom:100px ;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+    section .detalle-de-producto{
+        display: flex;
+        width: 350px;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    section .detalle-de-producto h5{
+    display: none;
+    }
+    section .detalle-de-producto h6{
+    display: none;
+    }
+    section .detalle-de-producto .texto{
+        text-align: center;
+        font-size: 16px;
+        margin-bottom: 33px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    section .detalle-de-producto .btn{
+        display: flex;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    section .detalle-de-producto .btn button{
+        font-size: 20px;
+        font-family: inherit;
+        text-transform:uppercase;
+        font-weight: 600;
+        background: rgba(12, 76, 242, 0.8);
+        border-radius: 9px;
+        padding: 8px;
+        padding-left: 20px;
+        padding-right: 20px;
+        height: 50px;
+        width: 130px;
+        margin-left: 10px;
+        margin-right: 10;
+        top: 0px;
+        border-radius: 15px;
+
+
+    }
+    section .detalle-de-producto .btn button:hover{
+        background-color: transparent;
+        color: rgba(12, 76, 242, 0.8);
+        transition: 0.6s;
+    }
+
+}
+@media(min-width:750px){
+    section{
+        width: auto;
+        height: 500px;
+    }
+    section h1{
+        margin-top: 70px;
+        margin-bottom: 60px;      
+        text-align: center;
+        font-size: 40px;
+        text-transform: uppercase;
+    }
+    section .seccion-cuerpo{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+
+    }
+    section .detalle-de-producto{
+        display: flex;
+        width: 500px;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    section .detalle-de-compra{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    section .detalle-de-producto h5{
+        font-size: 20px;
+        text-transform: uppercase;
+        font-family: inherit;
+        margin-right: 30px;
+    }
+    section .detalle-de-producto h6{
+        font-size: 18px;
+        margin-left: 10px;
+    }
+    section .detalle-de-producto .texto{
+        text-align: center;
+        font-size: 18px;
+        margin-top: 10px;
+        margin-bottom: 33px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    section .detalle-de-producto .btn{
+        display: flex;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    section .detalle-de-producto .btn button{
+        font-size: 18px;
+        font-family: inherit;
+        text-transform:uppercase;
+        font-weight: 600;
+        background: rgba(12, 76, 242, 0.8);
+        border-radius: 9px;
+        padding: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        height: 40px;
+        width: 120px;
+        margin-left: 10px;
+        margin-right: 10px;
+        top: 0px;
+        border-radius: 15px;
+
+
+    }
+    section .detalle-de-producto .btn button:hover{
+        background-color: transparent;
+        color: rgba(12, 76, 242, 0.8);
+        transition: 0.6s;
+    }
+
+}
