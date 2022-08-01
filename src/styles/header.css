@@ -2,7 +2,6 @@
 *{
     margin: 0px;
     padding: 0px;
-    box-sizing: border-box;
 
 }
 /* 
@@ -10,6 +9,10 @@
 */
 
 @media(max-width:750px)and (orientation:portrait){
+    *{
+        overflow-x:auto ;
+    
+    }
     header{
         width: auto;
         margin: 0px auto;

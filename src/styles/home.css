@@ -3,6 +3,7 @@
 body{
     margin: 0px;
     padding: 0px;
+
     
 }
 /*
@@ -294,6 +295,323 @@ body{
         line-height: 16px;
         display: flex;
         align-items: center;
+
+    }
+    
+}
+@media(min-width:750px){
+    .banner{
+        max-width: 100%;
+        margin-top: 0px;
+        margin-bottom: 10px;
+        margin-left: 25px;
+        margin-right: 25px;
+        padding-top: 120px;
+        padding-bottom: 170px;
+        background-image: url('../../imagenes/fondo-de-baner2.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+    }
+    .cuerpo-banner {
+        display: flex;
+        flex-direction: column;
+        align-items:flex-start;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+
+    .cuerpo-banner h1{
+        font-size: 85px;
+        color: white ;
+        opacity: 95%;
+        margin-top: 10px;
+        margin-bottom: 30px;
+        margin-left: 35%;
+        margin-right: 35%;
+    }
+    .cuerpo-banner p {
+        color: white;
+        font-size: 40px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        margin-right: 50px;
+        margin-left: 80px;
+    }
+    .cuerpo-banner .botones{
+        display: flex;
+        justify-content: space-around;
+        align-items:flex-start;
+        margin: 40px 30px;
+        padding-left: 40px;
+
+        }
+    .cuerpo-banner .botones button{
+        cursor: pointer;
+        background-color: white;
+        color: black;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 35px;
+        padding-right: 35px;
+        margin: 30px;
+        border: solid black 1px;
+        border-radius: 16px;
+        font-weight: 600;
+
+    }
+    .cuerpo-banner .botones button:hover{
+        background-color: transparent;
+        color:white;
+        border:white solid 1px ;
+    }
+    /* 
+       Estamos en la parte de seccion clase cuerpo
+       background: rgba(12, 76, 242, 0.8);color azul 
+    */
+    .cuerpo{
+    margin: 50px;
+    }
+    .cuerpo h2{
+        text-align: center;
+        font-size: 60px;
+        margin-top: 60px;
+        margin-bottom: 40px;
+
+    }
+    .cuerpo .cuerpo-seccion-productos {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+
+    .cuerpo .cuerpo-seccion-productos .cuerpo-seccion-producto{
+        display: flex;
+        flex-direction: column;
+        align-items: center ;
+        margin-top: 80px;
+        margin-bottom: 50px;
+        
+    }
+    .cuerpo .cuerpo-seccion-productos .cuerpo-seccion-producto .div-productos{
+        
+        display: flex;
+        align-items: center;
+        padding: 30px;
+        width: 235px;
+        height: 248px;
+        margin-bottom: 17.15px;
+        border-radius: 20px;
+        
+    }
+    .producto1 .div-productos{
+        background-image: url('../../imagenes/electronica1.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .producto2 .div-productos{
+        background-image: url('../../imagenes/electronica2.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .producto3 .div-productos{
+        background-image: url('../../imagenes/electronica3.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .producto1 .div-productos h3{
+        left: 14.47%;
+        right: 14.89%;
+        top: 29.84%;
+        bottom: 33.87%;
+
+        /* font-family: 'Libre Caslon Text'; */
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 30px;
+        display: flex;
+        align-items: flex-end;
+        text-align: center;
+        color:white;
+    }
+    .producto2 .div-productos h3{
+        left: 14.89%;
+        right: 16.6%;
+        top: 21.77%;
+        bottom: 45.97%;
+        padding: 34px;
+
+        font-family: 'Libre Caslon Text';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 30px;
+        display: flex;
+        align-items: flex-end;
+        text-align: center;
+        color: white;
+    }
+    .producto3 .div-productos h3{
+        left: 19.57%;
+        right: 19.57%;
+        top: 23.39%;
+        bottom: 51.21%;
+        padding: 40px;
+
+        font-family: 'Libre Caslon Text';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 30px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: white;
+    }
+
+    .cuerpo-seccion-producto .div-btn{
+        right: 1.22%;
+        bottom: 0%;
+        width:227.84px ;
+        height:34.3px ;
+        left:213.7px ;
+        top: 4.3px;
+        display: flex;
+        flex-direction: row;
+        align-items: center ;
+        justify-content: space-evenly;
+    }
+    .cuerpo-seccion-producto .div-btn button{
+        cursor: pointer;
+        left: 1.83%;
+        right: 51.22%;
+        top: 86.17%;
+        bottom: 0%;
+        background: rgba(12, 76, 242, 0.8);
+        border-radius: 15px;
+        padding-left: 25px;
+        padding-right:25px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        text-transform: capitalize;
+        font-family: inherit;
+        font-style: normal;
+        font-weight: 600;
+        font-size:medium;
+        line-height: 15px;
+        margin-left: 10px;
+        margin-right: 10px;
+
+    }
+
+    /* 
+    estamos en la seccion de preguntas frecuentes
+    */
+
+    .cuerpo .cuerpo-seccion-preguntas{
+        display: flex;
+        flex-direction: row;
+        align-items:center ;
+        text-align: center;
+        justify-content: space-around;
+        margin: 10px 50px;
+        padding-left: 30px;
+        padding-right: 30px;
+
+    }
+    .cuerpo .cuerpo-seccion-pregunta{
+        margin-left: 18px;
+        margin-right: 18px;
+    }
+    .cuerpo .cuerpo-seccion-preguntas p {
+        font-size: 15px;
+        text-transform: capitalize;
+    }
+    .cuerpo-seccion-preguntas .cuerpo.seccion-pregunta{
+       
+        width: 246px;
+        height: 158px;
+        left: 38px;
+        top: 242px;
+    }
+    .cuerpo.seccion-preguntas .pregunta1 img{
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        margin-bottom: 43px;
+    }
+    .cuerpo.seccion-preguntas .pregunta2 img{
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        margin-bottom: 43px;
+    }
+    .cuerpo.seccion-preguntas .pregunta3 img{
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        margin-bottom: 43px;
+    }
+
+    /* 
+            Estamos en la seccion de Nosotros
+    */
+    .nosotros{
+        width: auto;
+        height: 900px;
+        margin-top:150px;
+        background-image: url('../../imagenes/persona-pensando.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .nosotros div{
+
+        display: flex;
+        flex-direction: column;
+        width: 413px;
+        height: 269px;
+        left: 0px;
+        top: 2349px;
+    }
+    .nosotros div h3{
+        margin-left: 19.86%;
+        margin-right: 51.64%;
+        margin-top: 18.69%;
+        margin-bottom: 15.59%;
+        
+        font-family: 'Libre Caslon Text';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 64px;
+        line-height: 79px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+
+    .nosotros div h5{
+
+        /* margin-right: 10.64%; */
+        margin-left: 10%;
+        margin-top: 8.93%;
+
+        font-family: 'Libre Caslon Text';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 34px;
+        line-height: 44px;
+        display: flex;
+        align-items: center;
+
 
     }
     
