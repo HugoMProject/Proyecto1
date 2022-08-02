@@ -105,6 +105,14 @@
         margin-bottom: 16px;
         margin-top: 20px;
     }
+    footer .pieDePagina-conteiner .Redes li a span img{
+        width: 28px;
+        height: 28px;
+    }
+    footer .pieDePagina-conteiner .Redes li a span img:hover{
+       opacity: 70%;
+       transition: 0.5s;
+    }
     
     footer .pieDePagina-conteiner  ul li a {
         text-decoration: none;
@@ -195,13 +203,16 @@
         align-items: center;
     }
     footer .pieDePagina-conteiner .Redes li{
-        color: black;
-        font-size: 17px;
         margin: 0px 0px 10px 10px;
     }
-    footer .pieDePagina-conteiner .Redes li a:hover {
-        color: white;
-        transition: 0.4s;
+    
+    footer .pieDePagina-conteiner .Redes li a span img{
+        width: 40px;
+        height: 40px;
+    }
+    footer .pieDePagina-conteiner .Redes li a span img:hover{
+       opacity: 70%;
+       transition: 0.5s;
     }
 
     footer .pieDePagina-conteiner ul {
