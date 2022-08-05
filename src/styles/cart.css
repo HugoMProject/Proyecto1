@@ -44,6 +44,9 @@ body{
         justify-content: space-around;
         align-items: center;
     }
+    .cuerpo .cuerpo-carrito .producto .producto-pc-info{
+        display: none;
+    }
     .cuerpo .cuerpo-carrito img {
         width: 60px;
         height: 60px;
@@ -66,6 +69,9 @@ body{
         padding: 0px;
         margin: 0px;
 
+    }
+    .cuerpo .cuerpo-carrito .producto .producto-info .producto-info-1 p{
+     display: none;
     }
     .cuerpo .cuerpo-carrito .producto .producto-info .producto-info-1 img{
         width: 18px;
@@ -95,7 +101,7 @@ body{
         width: 40px;
         height: 40px;
     }
-    .cuerpo h3{
+    .cuerpo .total{
         text-align: center;
         font-size: 20px;
         font-family: inherit;
@@ -130,4 +136,156 @@ body{
 
 
 
-@media(min-width:750px){}
+@media(min-width:750px){
+    h1{
+        margin-top: 30px;
+        text-align: center;
+        font-size: 50px;
+        font-family: inherit;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+    .cuerpo{
+
+        margin-top:55px;
+        margin-bottom: 87px;;
+        margin-left:25px;
+        margin-right: 25px;
+        background: rgba(233, 248, 255, 0.12);
+        border: 1px solid #000000;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+    }
+    
+
+    .cuerpo .cuerpo-carrito{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        padding: 4px;
+    }
+    .cuerpo .cuerpo-carrito .titulos-cabecera-cuerpo{
+        width: 1200px;
+        margin-bottom: 40px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+        .tipo-de-producto{
+            margin-left: 150px;
+            margin-right: 240px;
+        }
+        .cantidad-de-producto{
+            margin-left: 40px;
+            margin-right: 15px;
+        }
+        .precio-del-producto{
+            margin-right: 30px;
+        }
+    .cuerpo .cuerpo-carrito .titulos-cabecera-cuerpo .producto-pc-info{
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: 600;
+        
+    }
+    
+    .cuerpo .cuerpo-carrito .producto{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        width: 1200px;
+        height: 126px;
+        left: 104px;
+        top: 238px;
+    }
+    .cuerpo .cuerpo-carrito img {
+        width: 120px;
+        height: 120px;
+        background-size: cover;
+    }
+    .cuerpo .cuerpo-carrito .producto .producto-info{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+        padding: 2px;
+        width: 1000px;
+        height: auto;
+    }
+    .cuerpo .cuerpo-carrito .producto .producto-info .producto-info-1{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0px;
+        margin: 0px;
+
+    }
+    .cuerpo .cuerpo-carrito .producto .producto-info .producto-info-1 h4{
+        display: none;
+    }
+    .cuerpo .cuerpo-carrito .producto .producto-info .producto-info-1 img{
+        display: none;
+    }
+    .cuerpo .cuerpo-carrito .producto .producto-info .producto-info-1 p{
+        width: 350px;
+        height: auto;
+    }
+    .cuerpo .cuerpo-carrito .producto .producto-info .producto-info-2{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 200px;
+    }
+    .cuerpo .cuerpo-carrito .producto .producto-info .producto-info-2 input  {
+        width: 45px;
+        height: 15px;
+        border: solid 1.5px black;
+    }
+    .cuerpo .cuerpo-carrito .producto .producto-info .producto-info-2 .price3  {
+        display: none;
+    }
+
+    .cuerpo .cuerpo-carrito .producto .producto-info .producto-info-2 img {
+        width: 40px;
+        height: 40px;
+    }
+    .cuerpo .total{
+        text-align: center;
+        font-size: 20px;
+        font-family: inherit;
+        text-transform: uppercase;
+    }
+    .cuerpo .total-price{
+        width: 100px;
+        height: 20px;
+        border: solid 1.5px black;
+    }
+    .cuerpo button{
+        cursor: pointer;
+        background-color: blue;
+        color:black;
+        border-radius: 10px;
+        width: 100px;
+        height: 33px;
+        font-family: inherit;
+        font-size:16px;
+        font-weight: 500;
+        text-transform: uppercase;
+
+    }
+    .cuerpo button:hover{
+        background-color:transparent;
+        color:black;
+        transition: 0.6S;
+
+
+    }
+}
