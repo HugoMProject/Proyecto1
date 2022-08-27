@@ -4,6 +4,7 @@
     padding: 0px;
 
 }
+
 /* 
         mobile first
 */
@@ -138,6 +139,9 @@
         padding: 7px;
         padding-right:30px ;
         padding-left:30px ;
+    }
+    header nav div button a {
+        text-decoration: none;
     }
     header nav div button:hover{
         background-color: transparent;
