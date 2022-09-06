@@ -1,25 +1,28 @@
-{
+{ 
+  "name": "e-commerce1",
   "description": "E-COMMERCE SERVICIOS ESTRUCTURALES Y TECNOLOGICOS",
   "version": "1.0.0",
-  "main": "app.js",
-  "devDependencies": {},
+  "main": "src/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev:start":"npx nodemon src/app.js"
+    "start:dev": " nodemon src/app.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/HugoMProject/Proyecto1.git"
   },
   "keywords": [],
-  "name": "e-commerce1",
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/HugoMProject/Proyecto1/issues"
   },
   "dependencies": {
+    "ejs": "^3.1.8",
     "express": "^4.18.1"
   },
-  "homepage": "https://github.com/HugoMProject/Proyecto1#readme"
+  "homepage": "https://github.com/HugoMProject/Proyecto1#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
 }
