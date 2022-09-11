@@ -1,17 +1,17 @@
-const path = require("path")
+const path = require("path");
 const express = require("express");
 const app = express();
 
 app.get('/', (req, res) =>{
     res.send('Estoy en Home')
-})
+});
 
 app.get('/aboutUs',  (req, res) =>{
     res.send('Estoy en aboutUs') 
-})
+});
 app.get('/detail-Product',  (req, res) => {
     res.send('Estoy en detail-Product') 
-})
+});
 app.get('/login', (req, res) => {
     res.send('Estoy en login') 
 });
