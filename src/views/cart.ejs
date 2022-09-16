@@ -1,31 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- incluimos el head y ademas le pasamos un parametro a tittlePage para que nos renderise el nombre de la pagina-->
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cart</title>
-    <link rel="stylesheet" href="">
-    <link rel="stylesheet" href="../styles/cart.css">
-    <link rel="stylesheet" href="../styles/header.css">
-    <link rel="stylesheet" href="../styles/footer.css">
+<%- include("partials/head",{titlePage:'cart'})   %>
 </head>
+
 <body>
 
-    <header class="cabecera">
-        <nav class="cabecera-principal">
-            <div><img class="logo" src="C:\Users\Usuario\Documents\E-commerce1\logo\a11a4dca363844de948137bb41383a8a.png" alt="Logo de la empresa"></div>
-            <ul class="links">
-                
-                <li><a href="C:\Users\Usuario\Documents\E-commerce1\src\views\home.html">Inicio</a></li>
-                <li><a href="C:\Users\Usuario\Documents\E-commerce1\src\views\aboutUs.html">Nosotros</a></li>
-                <li><a href="C:\Users\Usuario\Documents\E-commerce1\src\views\detail-Product.html">Tienda</a></li>
-                <li><a href="C:\Users\Usuario\Documents\E-commerce1\src\views\login.html">Login</a></li>
-            </ul>
-            <div><a href="C:\Users\Usuario\Documents\E-commerce1\src\views\cart.html"><button type="button">Carrito</button></a></div>            <div  class="contenedor-btn-menu"><a class="btn-menu" href="C:\Users\Usuario\Documents\E-commerce1\src\views\cart.html"><span class="icon-menu"><img src="../../imagenes/lines_menu_burger_icon_123889.png"></span></a></div>
-        </nav>
-        
-    </header>
+    <header>
+        <%- include('partials/header')  %> 
+</header>
     <H1>Carrito</H1>
         <section class="cuerpo">
             <div class="cuerpo-carrito">
@@ -109,33 +93,9 @@
 
 
 
-    <footer class="pieDePagina">
-        <div class="pieDePagina-conteiner">
-            <div class="orden-img-preguntas">
-                <div clas="img"><img src="C:\Users\Usuario\Documents\E-commerce1\logo\a11a4dca363844de948137bb41383a8a.png" alt="Logo de la empresa"></div>
-                <div class="div-preguntas-footer">
-                    <h4 class="preguntas-frecuentes-footer">¿Preguntas Frecuentes?</h4>
-                    <h5 class="preguntas-frecuentes-footer-text">La solucion a tus problemas</h5>
-                </div>
-        </div>
-            
-            <ul class="links-pieDePagina">
-                <li><a href="">Ayuda</a></li>
-                <li><a href="">Nosotros</a></li>   
-            </ul>
-            <ul class="Redes">
-                <li><a href=""><span><img src="../../imagenes/twitter-3_icon-icons.com_50735.png"></span></a></li> 
-                <li><a href=""><span><img src="../../imagenes/instagram_logo_icon_173753.png"></span></a></li> 
-                <li><a href=""><span><img src="../../imagenes/facebook_icon_153518.png"></span></a></li>                     
-            </ul>
-            <br>
-        </div>
-        <br>
-        <div class="tittle5">
-            <h5>Copy right 2022</h5>
-            <h5><a href="">Terminos y Condiciones</a></h5>
-        </div>
-    </footer>
+        <footer>
+            <%- include('partials/footer')  %> 
+        </footer>
 
 
     

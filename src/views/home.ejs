@@ -1,31 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- incluimos el head y ademas le pasamos un parametro a tittlePage para que nos renderise el nombre de la pagina-->
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOME</title>
-    <link rel="stylesheet" href="../styles/home.css">
-    <link rel="stylesheet" href="../styles/header.css">
-    <link rel="stylesheet" href="../styles/footer.css">
+    <%- include("partials/head",{titlePage:'home'})   %>
 </head>
-<body>
 
-        <header class="cabecera">
-            <nav class="cabecera-principal">
-                <div><img class="logo" src="C:\Users\Usuario\Documents\E-commerce1\logo\a11a4dca363844de948137bb41383a8a.png" alt="Logo de la empresa"></div>
-                <ul class="links">
-                    
-                    <li><a href="C:\Users\Usuario\Documents\E-commerce1\src\views\home.html">Inicio</a></li>
-                    <li><a href="C:\Users\Usuario\Documents\E-commerce1\src\views\aboutUs.html">Nosotros</a></li>
-                    <li><a href="C:\Users\Usuario\Documents\E-commerce1\src\views\detail-Product.html">Tienda</a></li>
-                    <li><a href="C:\Users\Usuario\Documents\E-commerce1\src\views\login.html">Login</a></li>
-                </ul>
-                <div><a href="C:\Users\Usuario\Documents\E-commerce1\src\views\cart.html"><button type="button">Carrito</button></a></div>
-                <div  class="contenedor-btn-menu"><a class="btn-menu" href="C:\Users\Usuario\Documents\E-commerce1\src\views\cart.html"><span class="icon-menu"><img src="../../imagenes/lines_menu_burger_icon_123889.png"></span></a></div>
-            </nav>
-            
+<body>
+    
+        <header>
+                <%- include('partials/header')  %> 
         </header>
+      
         <section class="banner">
             <div class="cuerpo-banner">
                 <h1>Bienvenido</h1>
@@ -93,34 +78,647 @@
                 <h5>Somos una empresa que te trae la soluciones a tus problemas estructurales</h5>
             </div>
         </section>
-        <footer class="pieDePagina">
-            <div class="pieDePagina-conteiner">
-                <div class="orden-img-preguntas">
-                    <div clas="img"><img src="C:\Users\Usuario\Documents\E-commerce1\logo\a11a4dca363844de948137bb41383a8a.png" alt="Logo de la empresa"></div>
-                    <div class="div-preguntas-footer">
-                        <h4 class="preguntas-frecuentes-footer">¿Preguntas Frecuentes?</h4>
-                        <h5 class="preguntas-frecuentes-footer-text">La solucion a tus problemas</h5>
-                    </div>
-            </div>
-                
-                <ul class="links-pieDePagina">
-                    <li><a href="">Ayuda</a></li>
-                    <li><a href="">Nosotros</a></li>   
-                </ul>
-                <ul class="Redes">
-                    <li><a href=""><span><img src="../../imagenes/twitter-3_icon-icons.com_50735.png"></span></a></li> 
-                    <li><a href=""><span><img src="../../imagenes/instagram_logo_icon_173753.png"></span></a></li> 
-                    <li><a href=""><span><img src="../../imagenes/facebook_icon_153518.png"></span></a></li>                     
-                </ul>
-                <br>
-            </div>
-            <br>
-            <div class="tittle5">
-                <h5>Copy right 2022</h5>
-                <h5><a href="">Terminos y Condiciones</a></h5>
-            </div>
+        <footer>
+            <%- include('partials/footer')  %> 
         </footer>
 
     
 </body>
+<style>
+    @import url(https://fonts.google.com/specimen/Frank+Ruhl+Libre);
+
+body{
+    margin: 0px;
+    padding: 0px;
+
+    
+}
+/*
+    mobile first
+*/
+@media(max-width:750px){
+    .banner{
+        margin-top: 0px;
+        margin-bottom: 10px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        background-image: url('../public/imagenes/fondo-de-baner2.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+    }
+    .cuerpo-banner {
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .cuerpo-banner h1{
+        font-size: 35px;
+        color: white ;
+        opacity: 95%;
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+    .cuerpo-banner p {
+        color: white;
+        font-size: 20px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+    .cuerpo-banner .botones{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 30px 10px;
+
+        }
+    .cuerpo-banner .botones button{
+        cursor: pointer;
+        background-color: white;
+        color: black;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 19px;
+        padding-right: 19px;
+        margin: 10px;
+        border: solid black 1px;
+        border-radius: 12px;
+        font-weight: 600;
+
+    }
+    /* 
+       Estamos en la parte de seccion clase cuerpo
+       background: rgba(12, 76, 242, 0.8);color azul 
+    */
+    .cuerpo{
+    margin: 50px;
+    }
+    .cuerpo h2{
+        text-align: center;
+        font-size: 30px;
+        margin-top: 15px;
+        margin-bottom: 30px;
+
+    }
+    .cuerpo .cuerpo-seccion-productos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cuerpo .cuerpo-seccion-productos .cuerpo-seccion-producto{
+        display: flex;
+        flex-direction: column;
+        align-items: center ;
+        margin-top: 80px;
+        margin-bottom: 50px;
+        
+    }
+    .cuerpo .cuerpo-seccion-productos .cuerpo-seccion-producto .div-productos{
+        
+        display: flex;
+        align-items: center;
+        padding: 30px;
+        height: 190px;
+        margin-bottom: 17.15px;
+        border-radius: 20px;
+        
+    }
+    .producto1 .div-productos{
+        background-image: url('../../imagenes/electronica1.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .producto2 .div-productos{
+        background-image: url('../../imagenes/electronica2.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .producto3 .div-productos{
+        background-image: url('../../imagenes/electronica3.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 200px;
+        border-radius: 20px;
+    }
+    .producto1 .div-productos h3{
+        left: 14.47%;
+        right: 14.89%;
+        top: 29.84%;
+        bottom: 33.87%;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 30px;
+        display: flex;
+        align-items: flex-end;
+        text-align: center;
+        color:white;
+    }
+    .producto2 .div-productos h3{
+        left: 14.89%;
+        right: 16.6%;
+        top: 21.77%;
+        bottom: 45.97%;
+        padding: 34px;
+
+        font-family: 'Libre Caslon Text';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 30px;
+        display: flex;
+        align-items: flex-end;
+        text-align: center;
+        color: white;
+    }
+    .producto3 .div-productos h3{
+        left: 19.57%;
+        right: 19.57%;
+        top: 23.39%;
+        bottom: 51.21%;
+        padding: 40px;
+
+        font-family: 'Libre Caslon Text';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 30px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: white;
+    }
+
+    .cuerpo-seccion-producto .div-btn{
+        right: 1.22%;
+        bottom: 0%;
+        width:227.84px ;
+        height:34.3px ;
+        left:213.7px ;
+        top: 4.3px;
+        display: flex;
+        flex-direction: row;
+        align-items: center ;
+        justify-content: space-evenly;
+    }
+    .cuerpo-seccion-producto .div-btn button{
+        cursor: pointer;
+        left: 1.83%;
+        right: 51.22%;
+        top: 86.17%;
+        bottom: 0%;
+        background: rgba(12, 76, 242, 0.8);
+        border-radius: 15px;
+        padding-left: 20px;
+        padding-right:20px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        text-transform: capitalize;
+        font-family: inherit;
+        font-style: normal;
+        font-weight: 600;
+        font-size:medium;
+        line-height: 15px;
+
+    }
+
+    /* 
+    estamos en la seccion de preguntas frecuentes
+    */
+
+    .cuerpo .cuerpo-seccion-preguntas{
+        display: flex;
+        flex-direction: column;
+        align-items:center ;
+        text-align: center;
+
+    }
+    .cuerpo .cuerpo-seccion-preguntas p {
+        display: none;
+    }
+    .cuerpo-seccion-preguntas .cuerpo.seccion-pregunta{
+       
+        width: 246px;
+        height: 158px;
+        left: 38px;
+        top: 242px;
+    }
+    .cuerpo-seccion-preguntas .pregunta1 img{
+        width: 160px;
+        height: 160px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        margin-bottom: 43px;
+    }
+    .cuerpo-seccion-preguntas .pregunta2 img{
+        width: 185px;
+        height: 185px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        margin-bottom: 43px;
+    }
+    .cuerpo-seccion-preguntas .pregunta3 img{
+        width: 160px;
+        height: 160px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        margin-bottom: 43px;
+    }
+
+    /* 
+            Estamos en la seccion de Nosotros
+    */
+    .nosotros{
+        margin: 0px;
+        background-image: url('../../imagenes/persona-pensando.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .nosotros div{
+
+        display: flex;
+        flex-direction: column;
+        height: 269px;
+        left: 0px;
+        top: 2349px;
+    }
+    .nosotros div h3{
+        height: 73px;
+        width: 297px;
+        margin-left: 10px;
+        margin-top: 0px;
+        margin-bottom: 17px;
+        font-family: inherit;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 30px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+
+    .nosotros div h5{
+        width: 207px;
+        height: 80px;
+        margin-left: 14px;
+        margin-top: 15.99px;
+        margin-bottom: 100px;
+        font-family: inherit;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 16px;
+        display: flex;
+        align-items: center;
+
+    }
+    
+}
+@media(min-width:750px){
+    .banner{
+        max-width: 100%;
+        margin-top: 0px;
+        margin-bottom: 10px;
+        margin-left: 25px;
+        margin-right: 25px;
+        padding-top: 120px;
+        padding-bottom: 170px;
+        background-image: url('../../imagenes/fondo-de-baner2.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+    }
+    .cuerpo-banner {
+        display: flex;
+        flex-direction: column;
+        align-items:flex-start;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+
+    .cuerpo-banner h1{
+        font-size: 85px;
+        color: white ;
+        opacity: 95%;
+        margin-top: 10px;
+        margin-bottom: 30px;
+        margin-left: 35%;
+        margin-right: 35%;
+    }
+    .cuerpo-banner p {
+        color: white;
+        font-size: 40px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        margin-right: 50px;
+        margin-left: 80px;
+    }
+    .cuerpo-banner .botones{
+        display: flex;
+        justify-content: space-around;
+        align-items:flex-start;
+        margin: 40px 30px;
+        padding-left: 40px;
+
+        }
+    .cuerpo-banner .botones button{
+        cursor: pointer;
+        background-color: white;
+        color: black;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 35px;
+        padding-right: 35px;
+        margin: 30px;
+        border: solid black 1px;
+        border-radius: 16px;
+        font-weight: 600;
+
+    }
+    .cuerpo-banner .botones button:hover{
+        background-color: transparent;
+        color:white;
+        border:white solid 1px ;
+        transition: all 0.5s;
+        
+    }
+    /* 
+       Estamos en la parte de seccion clase cuerpo
+       background: rgba(12, 76, 242, 0.8);color azul 
+    */
+    .cuerpo{
+    margin: 50px;
+    }
+    .cuerpo h2{
+        text-align: center;
+        font-size: 60px;
+        margin-top: 60px;
+        margin-bottom: 40px;
+
+    }
+    .cuerpo .cuerpo-seccion-productos {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+
+    .cuerpo .cuerpo-seccion-productos .cuerpo-seccion-producto{
+        display: flex;
+        flex-direction: column;
+        align-items: center ;
+        margin-top: 80px;
+        margin-bottom: 50px;
+        width: 280px;
+        height: 290px;
+        
+    }
+    .cuerpo .cuerpo-seccion-productos .cuerpo-seccion-producto .div-productos{
+        
+        display: flex;
+        align-items: center;
+        padding: 30px;
+        width: 235px;
+        height: 248px;
+        margin-bottom: 17.15px;
+        border-radius: 20px;
+        
+    }
+    .producto1 .div-productos{
+        background-image: url('../../imagenes/electronica1.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .producto2 .div-productos{
+        background-image: url('../../imagenes/electronica2.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .producto3 .div-productos{
+        background-image: url('../../imagenes/electronica3.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .producto1 .div-productos h3{
+        left: 14.47%;
+        right: 14.89%;
+        top: 29.84%;
+        bottom: 33.87%;
+
+        /* font-family: 'Libre Caslon Text'; */
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 30px;
+        display: flex;
+        align-items: flex-end;
+        text-align: center;
+        color:white;
+    }
+    .producto2 .div-productos h3{
+        left: 14.89%;
+        right: 16.6%;
+        top: 21.77%;
+        bottom: 45.97%;
+        padding: 34px;
+
+        font-family: 'Libre Caslon Text';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 30px;
+        display: flex;
+        align-items: flex-end;
+        text-align: center;
+        color: white;
+    }
+    .producto3 .div-productos h3{
+        margin-left: 18px;
+        margin-right: 18px;
+        padding: 40px;
+
+        font-family: 'Libre Caslon Text';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 30px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: white;
+    }
+
+    .cuerpo-seccion-producto .div-btn{
+        right: 1.22%;
+        bottom: 0%;
+        width:227.84px ;
+        height:34.3px ;
+        left:213.7px ;
+        top: 4.3px;
+        display: flex;
+        flex-direction: row;
+        align-items: center ;
+        justify-content: space-evenly;
+    }
+    .cuerpo-seccion-producto .div-btn button{
+        cursor: pointer;
+        left: 1.83%;
+        right: 51.22%;
+        top: 86.17%;
+        bottom: 0%;
+        background: rgba(12, 76, 242, 0.8);
+        border-radius: 15px;
+        padding-left: 25px;
+        padding-right:25px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        text-transform: capitalize;
+        font-family: inherit;
+        font-style: normal;
+        font-weight: 600;
+        font-size:medium;
+        line-height: 15px;
+        margin-left: 10px;
+        margin-right: 10px;
+
+    }
+    .cuerpo-seccion-producto .div-btn button:hover{
+        background-color: transparent;
+        color: rgba(12, 76, 242, 0.8);
+        transition: all 0.4s;
+    }
+
+    /* 
+    estamos en la seccion de preguntas frecuentes
+    */
+
+    .cuerpo .cuerpo-seccion-preguntas{
+        display: flex;
+        flex-direction: row;
+        align-items:center ;
+        text-align: center;
+        justify-content: space-around;
+        margin: 10px 50px;
+        padding-left: 30px;
+        padding-right: 30px;
+
+    }
+    .cuerpo .cuerpo-seccion-pregunta{
+        margin-left: 18px;
+        margin-right: 18px;
+    }
+    .cuerpo .cuerpo-seccion-preguntas p {
+        font-size: 15px;
+        text-transform: capitalize;
+    }
+    .cuerpo-seccion-preguntas .cuerpo.seccion-pregunta{
+       
+        width: 246px;
+        height: 158px;
+        left: 38px;
+        top: 242px;
+    }
+    .cuerpo-seccion-preguntas .pregunta1 img{
+        height: 180px;
+        width: 180px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        margin-bottom: 43px;
+    }
+    .cuerpo-seccion-preguntas .pregunta2 img{
+        height: 200px;
+        width: 200px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        margin-bottom: 43px;
+    }
+    .cuerpo-seccion-preguntas .pregunta3 img{
+        height: 180px;
+        width: 180px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        margin-bottom: 43px;
+    }
+
+    /* 
+            Estamos en la seccion de Nosotros
+    */
+    .nosotros{
+        width: auto;
+        height: 900px;
+        margin-top:150px;
+        background-image: url('../../imagenes/persona-pensando.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .nosotros div{
+
+        display: flex;
+        flex-direction: column;
+        width: 413px;
+        height: 269px;
+        left: 0px;
+        top: 2349px;
+    }
+    .nosotros div h3{
+        margin-left: 19.86%;
+        margin-right: 51.64%;
+        margin-top: 18.69%;
+        margin-bottom: 15.59%;
+        
+        font-family: 'Libre Caslon Text';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 64px;
+        line-height: 79px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+
+    .nosotros div h5{
+
+        /* margin-right: 10.64%; */
+        margin-left: 10%;
+        margin-top: 8.93%;
+
+        font-family: 'Libre Caslon Text';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 34px;
+        line-height: 44px;
+        display: flex;
+        align-items: center;
+
+
+    }
+    
+}
+</style>
 </html>
