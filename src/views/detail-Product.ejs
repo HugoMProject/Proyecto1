@@ -2,7 +2,8 @@
 <html lang="en">
 <!-- incluimos el head y ademas le pasamos un parametro a tittlePage para que nos renderise el nombre de la pagina-->
 <head>
-<%- include("partials/head",{titlePage:'detail-Product'})   %>
+        <%- include("partials/head",{titlePage:'detail-Product'})   %>
+        <link rel="stylesheet" href="css/detail-Product.css">
 </head>
 
 <body>
@@ -14,7 +15,7 @@
         <section>
         <h1>Detalles Del Producto</h1>
         <div class="seccion-cuerpo">
-            <div class="img"><img src="C:\Users\Usuario\Documents\E-commerce1\imagenes\producto1.jpg" alt="Imagen del producto">
+            <div class="img"><img src="imagenes\producto1.jpg" alt="Imagen del producto">
             </div>
             <div class="detalle-de-producto">
                 <div class="detalle-de-compra">
@@ -27,7 +28,7 @@
                 </span></div>
                 <br>
                 <div class="btn">
-                    <button type="submit"><img src="../../imagenes/shopping-cart_icon-icons.com_72552.png"></button>
+                    <button type="submit"><img src="imagenes/shopping-cart_icon-icons.com_72552.png"></button>
                     <button type="submit">Tienda</button>
                 </div>
             </div>

@@ -1,177 +1,18 @@
-
+<!--  Este es el arvhivo ejs de la cabecera-->
  <header class="cabecera">
     <nav class="cabecera-principal">
-        <div><img class="logo" src="desktop/logo/a11a4dca363844de948137bb41383a8a.png" alt="Logo de la empresa"></div>
+        <div><img class="logo" src="logo/a11a4dca363844de948137bb41383a8a.png" alt="Logo de la empresa"></div>
         <ul class="links">
             
-            <li><a href="C:\Users\Usuario\Documents\E-commerce1\src\views\home.html">Inicio</a></li>
-            <li><a href="C:\Users\Usuario\Documents\E-commerce1\src\views\aboutUs.html">Nosotros</a></li>
-            <li><a href="C:\Users\Usuario\Documents\E-commerce1\src\views\detail-Product.html">Tienda</a></li>
-            <li><a href="C:\Users\Usuario\Documents\E-commerce1\src\views\login.html">Login</a></li>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/aboutUs">Nosotros</a></li>
+            <li><a href="/detail-Product">Tienda</a></li>
+            <li><a href="/login">Login</a></li>
         </ul>
-        <div><a href="C:\Users\Usuario\Documents\E-commerce1\src\views\cart.html"><button type="button">Carrito</button></a></div>
-        <div  class="contenedor-btn-menu"><a class="btn-menu" href="C:\Users\Usuario\Documents\E-commerce1\src\views\cart.html"><span class="icon-menu"><img src="../../imagenes/lines_menu_burger_icon_123889.png"></span></a></div>
+        <div><a href="/cart"><button type="button">Carrito</button></a></div>
+        <div  class="contenedor-btn-menu"><a class="btn-menu" href="/cart"><span class="icon-menu"><img src="/imagenes/lines_menu_burger_icon_123889.png"></span></a></div>
     </nav>
     
 </header>
 
-<style>
-    @import url(https://fonts.google.com/specimen/Frank+Ruhl+Libre);
-*{
-    margin: 0px;
-    padding: 0px;
 
-}
-
-/* 
-        mobile first
-*/
-
-@media(max-width:700px)and (orientation:portrait){
-    *{
-        overflow-x:auto ;
-    
-    }
-    header{
-        width: auto;
-        margin: 0px auto;
-        background-color: #0C4CF2;
-       
-    }
-    .cabecera-principal{
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        
-    }
-    header nav {
-        width: auto;
-        margin: 0px auto;
-        padding: 0px;
-    }
-    header nav div{
-        margin: 0px auto;
-        padding: 0px;
-    }
-    
-    header nav div .logo{
-        margin: 0px 5px;
-        max-width: 40px;
-        max-height: 40px;
-        border-radius: 40px;
-    }
-    .links li{
-        list-style: none; 
-        font-size: 25px;
-    }
-    header nav ul li a{
-        display: none;
-    }
-    header nav div button{
-        display: none;
-    }
-    header nav .contenedor-btn-menu{
-        display: flex;
-        top:10px;
-        height: 50px;
-        align-items: center;
-    } 
-    header nav .contenedor-btn-menu .btn-menu .icon-menu img{
-        width: 35px;
-        height: 35px;
-
-    }
-    header nav .contenedor-btn-menu .btn-menu{
-        color:black;
-        text-decoration: none;
-        font-size: 20px;
-        padding: 5px;
-        padding-right:20px ;
-        padding-left:20px ;
-        border-radius: 7px;
-        cursor: pointer;
-
-        
-    }
-    header nav .contenedor-btn-menu .btn-menu:hover{
-       opacity: 70%;
-       transition: 0.6s;
-    }
-}
-/*
-        Media laptop
-*/
-
-@media(min-width:700px) {
-    header{
-        width: auto;
-        margin: 0px auto;
-        background-color: #0C4CF2;
-       
-    }
-    .cabecera-principal{
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        
-    }
-    header nav div img{
-        margin: 0px 5px;
-        margin-left: -50px;
-        margin-right: 100px;
-        max-width: 70px;
-        max-height: 60px;
-        border-radius: 40px;
-    }
-
-    .links{
-        display: flex;
-        justify-content: space-between;
-        
-
-    }
-
-    .links li{
-        list-style: none; 
-        font-size: 25px;
-    }
-    header nav ul li a{
-        text-decoration: none;
-        text-transform: uppercase;
-        color: black;
-        padding: 10px;   
-    }
-    header nav ul li a:hover{
-        background-color: #014ba0;
-        color:white;
-        padding: 10px;
-        transition: all 0.5s;   
-    }
-    header nav div button{
-        cursor: pointer;
-        font-size: 20px;
-        color:#014ba0;
-        background-color: white;
-        border: solid #014ba0 2px;
-        border-radius: 20px;
-        padding: 7px;
-        padding-right:30px ;
-        padding-left:30px ;
-    }
-    header nav div button a {
-        text-decoration: none;
-    }
-    header nav div button:hover{
-        background-color: transparent;
-        color: black;
-        border-radius: black solid 6px;
-        transition: all 0.6s;
-    }
-    header nav .contenedor-btn-menu{
-        display: none;
-        top:10px;
-        height: 50px;
-        align-items: center;
-    }
-}
-</style>
