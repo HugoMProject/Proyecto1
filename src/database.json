@@ -1,30 +1,30 @@
 [
     {
-        "id": 1,
+        "id":1,
         "name_product":"servicio tecnico",
         "price":"3000",
         "descripcion":"soporte tecnico"
     },
     {
-        "id": 2,
+        "id":2,
         "name_product":"servicio estructural",
         "price":"5000",
         "descripcion":"asesoramiento estructural"
     },
     {
-        "id": 3,
+        "id":3,
         "name_product":"servicio informatico",
         "price":"3000",
         "descripcion":"servicion de asistencia informatica e soporte"
     },
     {
-        "id": 4,
+        "id":4,
         "name_product":"servicio electrico y estructuras",
         "price":"3000",
         "descripcion":"servicio electrico e instalacion electrica del mismo"
     },
     {
-        "id": 5,
+        "id":5,
         "name_product":"sistema de analisis de datos",
         "price":"3000",
         "descripcion":"analisis de datos e control de los mismos"

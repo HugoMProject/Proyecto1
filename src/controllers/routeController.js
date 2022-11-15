@@ -1,36 +1,43 @@
-const path = require('path');
-
 
 const renderHomeView = (req, res) =>{
 
-    res.render('./views/home')
+    res.render('home')
 
 };
 const renderDetailProductView = (req, res) =>{
 
-    res.render('./views/detail-product')
+    res.render('detail-product')
 
 };
 const renderaboutUsView = (req, res) =>{
 
-    res.render('./views/aboutUs')
+    res.render('aboutUs')
 
 };
 const renderCartView = (req, res) =>{
 
-    res.render('./views/cart')
+    res.render('cart')
 
 };
 const renderLoginView = (req, res) =>{
 
-    res.render('./views/login')
+    res.render('login')
 
 };
+const renderRegisterView = (req, res) =>{
 
+    res.render('register')
+
+}
+
+//falta hacer el init
+   
 module.exports = {
     renderHomeView,
     renderDetailProductView,
     renderaboutUsView,
     renderCartView,
-    renderLoginView
+    renderLoginView,
+    renderRegisterView,
+   
 };

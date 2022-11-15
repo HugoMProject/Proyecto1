@@ -1,0 +1,30 @@
+[
+    {
+        "name": "hugo",
+        "surname": "moyano",
+        "password": "$2b$10$7cujocktksTjzCeAeJkzmO2wHyY26vuKP.KNcmQs62MkB5TzFf1m6",
+        "email": "hugo@gmail.com",
+        "date": "2014-02-08"
+    },
+    {
+        "name": "ramon",
+        "surname": "moyano",
+        "password": "$2b$10$lWy9OXDs3DGXXC/YyWVbaubS9XSvSC5XdNzw9B7acZ9zOtcG8BBiS",
+        "email": "ramon@gmail.com",
+        "date": "2019-11-16"
+    },
+    {
+        "name": "lucas",
+        "surname": "yupatti",
+        "password": "$2b$10$0h75W5Dw58ntOjg9FvsOEeVzw1J5UUxEIiuykzT90.58TX3PZAABq",
+        "email": "lucas@gmail.com",
+        "date": "2018-07-25"
+    },
+    {
+        "name": "sebastian",
+        "surname": "moyano",
+        "password": "$2b$10$GGH6WQmoSRcZzrS.emtFK.Y81LaZP3FGYLiRbx.xJXEDwZqsGLI8q",
+        "email": "sebastian@gmail.com",
+        "date": "2018-07-13"
+    }
+]
