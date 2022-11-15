@@ -4,7 +4,17 @@ const express = require("express");
 const bodyParser = require('body-parser');
 const app = express()
 const session = require('express-session');
-const cookie = require('cookie-parser')
+const cookie = require('cookie-parser');
+const db = require("../models");
+
+db.sequelize
+  .sync()
+  .then(() => {
+    console.log("Synced db.");
+  })
+  .catch((err) => {
+    console.log("Failed to sync db: " + err.message);
+  });
 
 app.set('view engine', 'ejs');
 app.set('views' , __dirname + '/views');
