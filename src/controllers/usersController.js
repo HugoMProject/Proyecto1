@@ -2,6 +2,9 @@ const fs = require ('fs');
 const bcrypt = require('bcrypt');
 const { validationResult } = require('express-validator');  
 const usuario = require('../../models/users').user;
+const db = require("../../models");
+const users = db.users;
+
 
 const processRegister = (req, res,)=>{
     let users_db = fs.readFileSync('src/users.json', 'utf-8');
@@ -45,16 +48,34 @@ const processLogin= (req, res,)=>{
     return res.redirect('/'); 
 
 };
-const createUser = () => {
-     create : async(req,res)=>{
-        try {
-            const {name, lastname ,password, email } = req.body
+const createUser = (req,res) => {
+    if (!req.body.name) {
+        res.status(400).send({
+          message: "Name can not be empty!",
+        });
+        return;
+      }
 
-            let user = await usuario.create({name, lastname, password,email});
-            res.status(200).send(user);
-        } catch (err) {
-            res.status(404).send(`${err}`);
-        }
-    }
+        // Create a Tutorial
+    const tutorial = {
+        name: req.body.name,
+        lastname: req.body.lastname,
+        password: req.body.password,
+        email: req.body.email,
+        date: req.body.date,
+    };
+
+     // Save Tutorial in the database
+  users.create(tutorial)
+  .then((data) => {
+    res.send(data);
+  })
+  .catch((err) => {
+    res.status(500).send({
+      message:
+        err.message || "Some error occurred while creating the Tutorial.",
+    });
+  });
+   
 }
 module.exports = {processRegister,processLogin, createUser}

@@ -1,4 +1,4 @@
-const { readProducts } = require('../models/product')
+const { readProducts } = require('../services/product')
 const checkProduct = (err,req,res,next) => {
     const { id } = req.params;
     const readOneProduct = readProducts(id);

@@ -1,5 +1,5 @@
 
-const {readProducts, readProduct} = require('../models/product')
+const {readProducts, readProduct} = require('../services/product')
 const product = require('../../models/products');
 const getAll = (req, res) => { 
         const AllProducts = readProducts();
