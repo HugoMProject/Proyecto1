@@ -3,30 +3,35 @@
         "id":1,
         "name_product":"servicio tecnico",
         "price":"3000",
-        "descripcion":"soporte tecnico"
+        "descripcion":"soporte tecnico",
+        "img":"/imagenes/electronica3.jpg"
     },
     {
         "id":2,
         "name_product":"servicio estructural",
         "price":"5000",
-        "descripcion":"asesoramiento estructural"
+        "descripcion":"asesoramiento estructural",
+        "img":"/imagenes/electronica3.jpg"
     },
     {
         "id":3,
         "name_product":"servicio informatico",
         "price":"3000",
-        "descripcion":"servicion de asistencia informatica e soporte"
+        "descripcion":"servicion de asistencia informatica e soporte",
+        "img":"/imagenes/electronica1.jpg"
     },
     {
         "id":4,
         "name_product":"servicio electrico y estructuras",
         "price":"3000",
-        "descripcion":"servicio electrico e instalacion electrica del mismo"
+        "descripcion":"servicio electrico e instalacion electrica del mismo",
+        "img":"/imagenes/electronica3.jpg"
     },
     {
         "id":5,
         "name_product":"sistema de analisis de datos",
         "price":"3000",
-        "descripcion":"analisis de datos e control de los mismos"
+        "descripcion":"analisis de datos e control de los mismos",
+        "img":"/imagenes/electronica3.jpg"
     }
 ]

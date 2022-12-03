@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- incluimos el head y ademas le pasamos un parametro a tittlePage para que nos renderise el nombre de la pagina-->
+<head>
+        <%- include("partials/head",{titlePage:'Tienda'})   %>
+        <link rel="stylesheet" href="css/tienda.css">
+</head>
+<body>
+    <header>
+        <%- include('partials/header')  %>
+</header>
+        <section>
+        <h1>Tienda</h1>
+        <div class="seccion-cuerpo">
+            <% products.forEach(product => { %> <div class="A"> <br>
+                <div class="img"><img src="<%- product.img %>" alt="Imagen del producto">
+                </div>
+                <div class="detalle-de-producto">
+                    <div class="detalle-de-compra">
+                        <h5><%- product.name_product %></h5>
+                        <h6><%- product.price %></h6>
+                    </div>
+                    <br>
+                    <div class="texto"><span><%- product.descripcion %>
+                    </span></div>
+                    <br>
+                    <div class="btn">
+                        <button type="submit"><img src="imagenes/shopping-cart_icon-icons.com_72552.png"></button>
+                        <button type="submit">Tienda</button>
+                    </div>
+                </div>
+
+            </div>
+            <% }) %>
+           
+        </div>
+        </section>
+        <footer>
+            <%- include('partials/footer')  %>
+        </footer>
+</body>
+</html>

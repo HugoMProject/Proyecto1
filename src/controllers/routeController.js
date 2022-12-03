@@ -1,13 +1,12 @@
-
+const  fs = require('fs');
 const renderHomeView = (req, res) =>{
 
     res.render('home')
 
 };
-const renderDetailProductView = (req, res) =>{
-
-    res.render('detail-product')
-
+const renderTiendaView = (req, res) => {
+    const products = JSON.parse(fs.readFileSync(__dirname + './../database.json'));
+    res.render('tienda', { products })
 };
 const renderaboutUsView = (req, res) =>{
 
@@ -34,7 +33,7 @@ const renderRegisterView = (req, res) =>{
    
 module.exports = {
     renderHomeView,
-    renderDetailProductView,
+    renderTiendaView,
     renderaboutUsView,
     renderCartView,
     renderLoginView,

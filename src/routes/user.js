@@ -1,6 +1,6 @@
 
 const express = require('express');
-const { renderHomeView, renderaboutUsView, renderDetailProductView, renderLoginView, renderCartView, renderRegisterView} = require('../controllers/routeController');
+const { renderHomeView, renderaboutUsView,  renderTiendaView, renderLoginView, renderCartView, renderRegisterView} = require('../controllers/routeController');
 const registerValidator = require('../middlewares/registerValidator');
 const router = express.Router();
 const { processRegister, processLogin, createUser } = require('../controllers/UsersController');
@@ -13,7 +13,7 @@ router.get('/',checkCookie ,renderHomeView);
 
 router.get('/aboutUs', renderaboutUsView); 
 
-router.get('/detail-Product', renderDetailProductView);
+router.get('/tienda',  renderTiendaView);
 
 router.get('/login', renderLoginView);
 

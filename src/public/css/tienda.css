@@ -83,8 +83,10 @@ body{
 }
 @media(min-width:750px){
     section{
-        width: auto;
-        height: 500px;
+        width: 100%;
+        height: auto;
+        margin: 10px;
+        overflow: hidden;
     }
     section h1{
         margin-top: 70px;
@@ -94,11 +96,30 @@ body{
         text-transform: uppercase;
     }
     section .seccion-cuerpo{
+        margin-top: 5px;
+        margin-bottom: 5px;
         display: flex;
-        flex-direction: row;
+        flex-direction:row;
+        flex-wrap:wrap;
+        align-items:stretch;
+        justify-content: space-evenly; 
+        
+    }
+    section .A{ 
+        display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: space-evenly;
-
+        height: 400px;
+        width: 400px;
+        flex-grow: wrap;
+        border: 1px solid #000000;
+        border-radius: 8px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        margin-left: 5px;
+        margin-right: 5px;
+        padding: 5px;
     }
     section .detalle-de-producto{
         display: flex;
@@ -108,19 +129,25 @@ body{
         
     }
     section .detalle-de-compra{
+        width: 20em;
         display: flex;
-        justify-content: space-evenly;
+        flex-direction: column;
+        justify-content: space-around;
         align-items: center;
     }
     section .detalle-de-producto h5{
+        width: 100%;
+        left: 0;
         font-size: 20px;
         text-transform: uppercase;
         font-family: inherit;
         margin-right: 30px;
     }
     section .detalle-de-producto h6{
+        width: 100%;
         font-size: 18px;
         margin-left: 10px;
+        margin-top: 5px;
     }
     section .detalle-de-producto .texto{
         text-align: center;

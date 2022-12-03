@@ -146,7 +146,7 @@ body{
         text-transform: uppercase;
     }
     .cuerpo{
-
+        overflow: hidden;
         margin-top:55px;
         margin-bottom: 87px;;
         margin-left:25px;
@@ -155,18 +155,28 @@ body{
         border: 1px solid #000000;
         border-radius: 20px;
         display: flex;
-        align-items: center;
+        flex-grow: 1;
+        padding: 5px;
     }
     
 
     .cuerpo .cuerpo-carrito{
         display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
         align-items: center;
         margin-top: 30px;
         margin-bottom: 30px;
         padding: 4px;
+
+        
+    }
+    .cuerpo .containers{
+        overflow: hidden;
+        width: 50%;
+        height: auto;
+        top: 400px;
     }
     .cuerpo .cuerpo-carrito .titulos-cabecera-cuerpo{
         width: 1200px;
@@ -205,8 +215,8 @@ body{
         top: 238px;
     }
     .cuerpo .cuerpo-carrito img {
-        width: 120px;
-        height: 120px;
+        width: 100%;
+        height: 100%;
         background-size: cover;
     }
     .cuerpo .cuerpo-carrito .producto .producto-info{
@@ -268,7 +278,7 @@ body{
         height: 20px;
         border: solid 1.5px black;
     }
-    .cuerpo button{
+    /* .cuerpo button{
         cursor: pointer;
         background-color: blue;
         color:black;
@@ -280,7 +290,7 @@ body{
         font-weight: 500;
         text-transform: uppercase;
 
-    }
+    } */
     .cuerpo button:hover{
         background-color:transparent;
         color:black;
