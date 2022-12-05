@@ -14,7 +14,7 @@
     <h1>Registrarse</h1>
     <div class="cuerpo">
         <div class="registro">
-            <form action="/register" method="post">
+            <form action="/register" method="post" onsubmit="return validacion()">
                 <div class="registro-input">
                     <label for="name">Nombre</label>
                     <input type="text" name="name" id="name"><br>

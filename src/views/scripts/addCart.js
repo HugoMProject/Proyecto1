@@ -1,6 +1,8 @@
+
+// import products from "../../../models/products";
 //no puedo importar la base de datos de productos
-const dbProducts = [
-    {
+// document.getElementById("myCheckbox").addEventListener("click", function(event){
+    const dbProducts = [ {
         "id":1,
         "name_product":"servicio tecnico",
         "price":"3000",
@@ -34,9 +36,7 @@ const dbProducts = [
         "price":"3000",
         "descripcion":"analisis de datos e control de los mismos",
         "img":"/imagenes/electronica3.jpg"
-    }
-]
-// document.getElementById("myCheckbox").addEventListener("click", function(event){
+    }]
 //     event.preventDefault()
 // 
 
@@ -62,7 +62,7 @@ function renderizarProductos() {
         // Imagen
         const miNodoImagen = document.createElement('img');
         miNodoImagen.classList.add('img-fluid');
-        miNodoImagen.setAttribute('src', info.imagen);
+        miNodoImagen.setAttribute('src', info.img);
         // Precio
         const miNodoPrecio = document.createElement('p');
         miNodoPrecio.classList.add('card-text');
