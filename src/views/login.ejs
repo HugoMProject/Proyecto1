@@ -14,18 +14,20 @@
     <h1>Ingresar</h1>
     <div class="cuerpo">
         <div class="ingresar">
-            <form action="/login" method="POST" onsubmit="return validacion()">
+            <form id="form" class="formLogin" action="/login" method="POST">
                 <div class="ingresar-input">
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email"><br>
+                    <label  for="email">Email</label>
+                    <input  type="email" name="email" id="email" placeholder="ingrese su email"><i class="isEmail fa-times-circle "></i><br>
+                    <span id="errorEmail" class="text-danger"></span>
                     <label for="password">Contraseña</label>
-                    <input type="password" name="password" id="password"><br>
-                    <label class="active" for="password" id="passwordAlert" >la constraseña o el Email es incorrecto</label><br>
+                    <input class="" type="password" name="password" id="password" placeholder="ingrese su Contraseña"><i class="isPassword far "></i><br>
+                    <span id="errorPassword" class="text-danger"></span><br>
                 </div>
                 <span><a href="/register">Registrarse</a></span>
                 <span><a href="">Olvide la Contraseña</a></span>
-
+                
                 <br>
+                <span id="errorForm" class="text-danger"></span><br>
                 <button type="submit" id="btn" >Ingresar</button>
             </form>
         </div>
