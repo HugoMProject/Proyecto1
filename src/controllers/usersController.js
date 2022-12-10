@@ -11,12 +11,13 @@ const processRegister = (req, res,)=>{
     let users = JSON.parse(users_db)
     const errors = validationResult(req)
     if(!errors.isEmpty()){
-       res.json(errors) 
+      return res.json(errors) 
     }
     const userInDb = users.find(user => user.email === req.body.email);
     if(userInDb) {
-                res.send('el correo ya esta registrado ');
-            }else {
+               return res.send('el correo ya esta registrado ');
+            }
+            else {
                 const { name,surname,password,email,date } = req.body;
                 const passwordHashed = bcrypt.hashSync(password, 10);
                 const newUser = {
@@ -26,17 +27,17 @@ const processRegister = (req, res,)=>{
                     email,
                     date
                 }
-    users.push(newUser);
-    let userDb = JSON.stringify(users)
-    fs.writeFileSync('src/users.json', userDb, 'utf-8');
-    res.redirect('/'); 
+              users.push(newUser);
+              let userDb = JSON.stringify(users)
+              fs.writeFileSync('src/users.json', userDb, 'utf-8');
+              res.redirect('/'); 
 
     }
 }
 const processLogin= (req, res,)=>{
     const errors = validationResult(req)
     if(!errors.isEmpty()){
-      res.json(errors); 
+     return res.json(errors); 
     }
     req.session.email = req.body.email;
     const { email, password } = req.body;
