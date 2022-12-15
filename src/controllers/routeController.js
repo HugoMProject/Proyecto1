@@ -1,12 +1,13 @@
-const  fs = require('fs');
+const db = require('../../models');
+const Products = db.products;
 const renderHomeView = (req, res) =>{
 
     res.render('home')
 
 };
 const renderTiendaView = (req, res) => {
-    const products = JSON.parse(fs.readFileSync(__dirname + './../database.json'));
-    res.render('tienda', { products })
+    Products.findAll().then( products =>{res.render('tienda', { products : products  })});
+    
 };
 const renderaboutUsView = (req, res) =>{
 

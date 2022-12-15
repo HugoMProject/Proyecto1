@@ -123,27 +123,7 @@ const editProduct = async (req, res) => {
       res.status(500).json({ message: "Error al actualizar el producto" });
     }
   };
-//delete product by id
-// const deleteProduct = async (req, res) => {
-//     const { productName,price,description,stock,img } = req.body;
-//     const editProd = {
-//         productName,
-//         price,
-//         description,
-//         stock,
-//         img
-//     }
-//     try {
-//       const Product = await product.findByPk(req.params.id);
-//       if (!Product) {
-//         return res.status(404).json({ message: "Producto no encontrado" });
-//       }
-//       Product.destroy(req.params.id).then(res.json(updatedProduct));
-      
-//     } catch (error) {
-//       res.status(500).json({ message: "Error al eliminar el producto" });
-//     }
-//   };
+  // delete product
 const deleteProduct = async (req, res) => {
   // Obtenemos el ID del producto a eliminar desde la solicitud
   const productId = req.params.id;

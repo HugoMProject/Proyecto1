@@ -1,53 +1,7 @@
 
-// import products from "../../../models/products";
-//no puedo importar la base de datos de productos
-// document.getElementById("myCheckbox").addEventListener("click", function(event){
-    const dbProduct= [ {
-        "id":1,
-        "name_product":"servicio tecnico",
-        "price":"3000",
-        "descripcion":"soporte tecnico",
-        "img":"/imagenes/electronica3.jpg"
-    },
-    {
-        "id":2,
-        "name_product":"servicio estructural",
-        "price":"5000",
-        "descripcion":"asesoramiento estructural",
-        "img":"/imagenes/electronica3.jpg"
-    },
-    {
-        "id":3,
-        "name_product":"servicio informatico",
-        "price":"3000",
-        "descripcion":"servicion de asistencia informatica e soporte",
-        "img":"/imagenes/electronica1.jpg"
-    },
-    {
-        "id":4,
-        "name_product":"servicio electrico y estructuras",
-        "price":"3000",
-        "descripcion":"servicio electrico e instalacion electrica del mismo",
-        "img":"/imagenes/electronica3.jpg"
-    },
-    {
-        "id":5,
-        "name_product":"sistema de analisis de datos",
-        "price":"3000",
-        "descripcion":"analisis de datos e control de los mismos",
-        "img":"/imagenes/electronica3.jpg"
-    }]
+ 
 //     event.preventDefault()
-function dbProd(){
-    fetch('http://localhost:3000/product').then(   
-        res => res.json()
-        ).then(
-        data =>  console.log(data) 
-      )
-      .catch(function(error) {
-        console.log('Hubo un problema con la petición Fetch:' + error.message);
-      });
-}
+
 const dbProducts =  dbProd();
 console.log(dbProducts)
 let carrito = [];
