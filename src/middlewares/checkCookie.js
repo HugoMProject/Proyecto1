@@ -1,6 +1,6 @@
 module.exports = (req,res,next)=>{
-    if(req.cookies.userData){
-        req.session.email = req.cookies.userData.email;
+    if(req.cookies.users){
+        req.session.email = req.cookies.users.email;
     }
     next();
 };

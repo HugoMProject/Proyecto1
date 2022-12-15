@@ -20,11 +20,10 @@ app.set('view engine', 'ejs');
 app.set('views' , __dirname + '/views');
 
 app.use(express.static(path.join(__dirname + '/public')));
-app.use(express.static(path.join(__dirname + '/views/scripts')));
 app.use('/desktop',express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.json());
-app.use(cookie());
+app.use(cookie("vamosArgentina"));
 app.use(session({
     secret:'123456789',
     cookie: {

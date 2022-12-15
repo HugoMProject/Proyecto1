@@ -8,13 +8,13 @@ const readProducts = () => {
 
     return JSON.parse(products);
 
-}
+};
 const readProduct = (id) =>{  
     const prods = readProducts()
     const prod = prods.find(p =>p.id == id);
   
     return prod;     
     
-}
+};
 
 module.exports = {readProducts, readProduct};

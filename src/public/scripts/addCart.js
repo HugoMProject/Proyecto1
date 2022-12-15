@@ -2,7 +2,7 @@
 // import products from "../../../models/products";
 //no puedo importar la base de datos de productos
 // document.getElementById("myCheckbox").addEventListener("click", function(event){
-    const dbProducts = [ {
+    const dbProduct= [ {
         "id":1,
         "name_product":"servicio tecnico",
         "price":"3000",
@@ -38,8 +38,18 @@
         "img":"/imagenes/electronica3.jpg"
     }]
 //     event.preventDefault()
-// 
-
+function dbProd(){
+    fetch('http://localhost:3000/product').then(   
+        res => res.json()
+        ).then(
+        data =>  console.log(data) 
+      )
+      .catch(function(error) {
+        console.log('Hubo un problema con la petición Fetch:' + error.message);
+      });
+}
+const dbProducts =  dbProd();
+console.log(dbProducts)
 let carrito = [];
 const divisa = '$';
 const DOMitems = document.querySelector('#items');
@@ -48,7 +58,7 @@ const DOMtotal = document.querySelector('#total');
 const DOMbotonVaciar = document.querySelector('#boton-vaciar');
 
 function renderizarProductos() {
-    dbProducts.forEach((info) => {
+    dbProduct.forEach((info) => {
         // Estructura
         const miNodo = document.createElement('div');
         miNodo.classList.add('card', 'col-sm-4');

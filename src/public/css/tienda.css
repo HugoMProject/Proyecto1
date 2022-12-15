@@ -83,7 +83,7 @@ body{
 }
 @media(min-width:750px){
     section{
-        width: 100%;
+        width: 90%;
         height: auto;
         margin: 10px;
         overflow: hidden;
@@ -110,8 +110,7 @@ body{
         flex-direction: column;
         align-items: center;
         justify-content: space-evenly;
-        height: 400px;
-        width: 400px;
+        width: 350px;
         flex-grow: wrap;
         border: 1px solid #000000;
         border-radius: 8px;
@@ -120,6 +119,14 @@ body{
         margin-left: 5px;
         margin-right: 5px;
         padding: 5px;
+    }
+    section .A .img{
+        background-size: contain;
+        width: auto;
+        height: 200px;
+    }
+    section .A .img img{
+        background-size: cover;
     }
     section .detalle-de-producto{
         display: flex;
@@ -150,12 +157,13 @@ body{
         margin-top: 5px;
     }
     section .detalle-de-producto .texto{
-        text-align: center;
+        width: 80%;
+        text-align:center;
         font-size: 18px;
         margin-top: 10px;
         margin-bottom: 33px;
-        margin-left: 20px;
-        margin-right: 20px;
+        /* margin-left: 10px;
+        margin-right: 10px; */
     }
     section .detalle-de-producto .btn{
         display: flex;

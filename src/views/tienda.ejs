@@ -18,15 +18,15 @@
                 <div class="detalle-de-producto">
                     <div class="detalle-de-compra">
                         <h5><%- product.name_product %></h5>
-                        <h6><%- product.price %></h6>
+                        <h6><%- '$ '+product.price %></h6>
                     </div>
                     <br>
                     <div class="texto"><span><%- product.descripcion %>
                     </span></div>
                     <br>
                     <div class="btn">
-                        <button type="submit"><img src="imagenes/shopping-cart_icon-icons.com_72552.png"></button>
-                        <button type="submit">Tienda</button>
+                        <button type="submit" href=""><img src="imagenes/shopping-cart_icon-icons.com_72552.png"></button>
+                        <button type="submit"><a href="/details-product"></a> Detalles</button>
                     </div>
                 </div>
 
