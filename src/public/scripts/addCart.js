@@ -1,7 +1,8 @@
-
- 
+/*
+            
+            tengo que editar el css para mejor la vista en el la vercion para movil!!!!!!!!!
 //     event.preventDefault()
-
+*/
 let carrito = [];
 const divisa = '$';
 const DOMcarrito = document.querySelector('#list'); // ul
@@ -14,27 +15,32 @@ const price = document.querySelector('.price').textContent;
 const productName = document.querySelector('.productName').textContent;
 const miLocalStorage = window.localStorage;
 
-
-
 /**
  * Evento para añadir un producto al carrito de la compra
  */
 function renderizarCarrito() {
-        const quantity = 1;
+        var quantity = 1;
         const carritoSinDuplicados = [...new Set(carrito)];
-
+        for (let i = 0; i < carritoSinDuplicados.length; i++) {
+            if (carritoSinDuplicados[i].productName == productName) {
+                carritoSinDuplicados[i].quantity = + 1;
+                console.log(carritoSinDuplicados)
+                break;
+            }};
+            
+    /*
         carritoSinDuplicados.forEach((item) => {
             // Obtenemos el item que necesitamos de la variable base de datos
             console.log(carritoSinDuplicados)
                 // ¿Coincide las id? Solo puede existir un caso
                 // return itemBaseDatos.id === parseInt(item);
-            });
+            });*/ 
             // Cuenta el número de veces que se repite el producto
         // Creamos el nodo del item del carrito
             const miNodo = document.createElement('li');
             const miNodospace = document.createElement('hr');
             miNodo.classList.add('list-group-item', 'text-right', 'mx-2',);
-            miNodo.textContent = `${quantity}  x  ${ productName }--${price}`;
+            miNodo.innerHTML = `${quantity}  x  ${ productName } -- ${price}`;
             // Boton de borrar
             const miBoton = document.createElement('button');
             miBoton.classList.add('btn', 'btn-danger', 'mx-5');

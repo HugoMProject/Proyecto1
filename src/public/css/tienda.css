@@ -5,7 +5,7 @@ body{
 
     
 }
-@media(max-width:750px){
+@media(max-width:500px){
     .cabecera{
         height: 55px;
     }
@@ -16,9 +16,19 @@ body{
         font-size: 20px;
         text-transform: uppercase;
     }
+    .div-cart{
+        margin-left: 5%;
+        width: 85%;
+       
+        height: auto;
+        border: 1px solid  black;
+         border-radius: 9px; 
+         padding: 10px;
+
+    }
     section .seccion-cuerpo{
-        width: 350;
-        height: 400px;
+        width: 95%;
+        height: 50%;
         margin-top: 100px;
         margin-bottom:100px ;
         display: flex;
@@ -26,11 +36,27 @@ body{
         align-items: center;
 
     }
-    section .detalle-de-producto{
+    section .A{ 
         display: flex;
-        width: 350px;
         flex-direction: column;
         align-items: center;
+        justify-content: space-evenly;
+        width: 80%;
+        height: 100%;
+        flex-grow: row;
+        border: 1px solid #000000;
+        border-radius: 8px;
+        margin-top: 5px;
+        margin-bottom: 5%;
+        margin-left: 5%;
+        padding: 5px;
+    }
+    section .detalle-de-producto{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items:center;
+        overflow: hidden;
         
     }
     section .detalle-de-producto h5{
@@ -40,18 +66,20 @@ body{
     display: none;
     }
     section .detalle-de-producto .texto{
-        text-align: center;
+        text-align:justify;
         font-size: 16px;
         margin-bottom: 33px;
-        margin-left: 20px;
-        margin-right: 20px;
+        margin-left: 5%;
+        margin-right: 5%;
     }
     section .detalle-de-producto .btn{
         display: flex;
-        margin-left: 20px;
-        margin-right: 20px;
+        width: 100%;
+        margin-left: 5%;
+        margin-right: 5%;
     }
     section .detalle-de-producto .btn button{
+        text-align: center;
         font-size: 20px;
         font-family: inherit;
         text-transform:uppercase;
@@ -61,15 +89,19 @@ body{
         padding-left: 20px;
         padding-right: 20px;
         height: 50px;
-        width: 130px;
-        margin-left: 10px;
-        margin-right: 10;
+        width: 100%;
+        margin-left: 5px;
         top: 0px;
-        border-radius: 15px;
+        border-radius: 25px;
         
         
     }
     section .detalle-de-producto .btn button img{
+        width: 30px;
+        height: 33px;
+        margin-top: 4px;
+    }
+    section .detalle-de-producto .btn button a{
         width: 30px;
         height: 33px;
         margin-top: 4px;
@@ -79,9 +111,8 @@ body{
         color: rgba(12, 76, 242, 0.8);
         transition: 0.6s;
     }
-
 }
-@media(min-width:750px){
+@media(min-width:500px){
     section{
         width: 95%;
         height: auto;
@@ -96,18 +127,15 @@ body{
         text-transform: uppercase;
     }
     .div-cart{
-        width: 50%;
-       
+        width: 60%;
+        margin-left: 10%;
         height: auto;
         border: 1px solid  black;
-         border-radius: 9px; 
-         padding: 10px;
+        border-radius: 9px; 
+        padding: 10px;
 
     }
     
-    @keyframes div-cartAnimation {
-            
-    }
     section .seccion-cuerpo{
         margin-top: 5px;
         margin-bottom: 5px;
