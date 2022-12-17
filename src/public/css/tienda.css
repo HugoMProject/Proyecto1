@@ -83,7 +83,7 @@ body{
 }
 @media(min-width:750px){
     section{
-        width: 90%;
+        width: 95%;
         height: auto;
         margin: 10px;
         overflow: hidden;
@@ -94,6 +94,19 @@ body{
         text-align: center;
         font-size: 40px;
         text-transform: uppercase;
+    }
+    .div-cart{
+        width: 50%;
+       
+        height: auto;
+        border: 1px solid  black;
+         border-radius: 9px; 
+         padding: 10px;
+
+    }
+    
+    @keyframes div-cartAnimation {
+            
     }
     section .seccion-cuerpo{
         margin-top: 5px;
