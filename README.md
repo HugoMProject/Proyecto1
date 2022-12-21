@@ -7,6 +7,7 @@ E-COMMERCE SERVICIOS ESTRUCTURALES Y TECNOLOGICOS
 
 La idea nace de una charla de negocio sobre los problemas que hay en los servicios de estructuras, luego de una larga charla nace la idea de brindar servicios, que puedan dar soluciones a estos problemas.
 
+    PRODUCTO
 el producto que vamos a ofrecer es el servicio como productos.
 
 brindando soluciones estructurales y de analisis de datos para minimizar sus gastos y asi aumentar sus ganancias a largo plazo.
@@ -36,3 +37,27 @@ https://fonts.google.com/specimen/Frank+Ruhl+Libre
 
  FIGMA
  https://www.figma.com/file/zWBSSwSvVoxkhdd4oSdnuH/proyecto1?node-id=0%3A1
+
+
+
+DEPENDENCIAS
+
+        bcrypt: ^5.0.1,
+        body-parser: ^1.20.1,
+        cookie-parser: ^1.4.6,
+        dotenv: ^16.0.3,
+        ejs: ^3.1.8,
+        express: ^4.18.1,
+        express-session: ^1.17.3,
+        express-validator: ^6.14.2,
+        mysql2: ^2.3.3,
+        sequelize: ^6.25.5
+ 
+DevDependencies 
+
+        nodemon:"^2.0.19"
+
+
+scripts para iniciar el proyecto
+
+    npm run start:dev

@@ -15,7 +15,11 @@ const renderaboutUsView = (req, res) =>{
 
 };
 const renderCartView = (req, res) =>{
-
+    Products.findByPk(req.params.id).then(product => {
+        return res.send(product);
+    }).catch(error => {
+        console.log(error);
+    })
     res.render('cart')
 
 };

@@ -25,9 +25,10 @@ router.get('/register', renderRegisterView);
 router.post('/register', registerValidator,processRegister);// create user for json
 router.post('/api/register', registerValidator,createUser);// create user for database
 
-router.get('/cart', renderCartView);
+router.get('/cart', renderCartView,);
                 //api json
 router.get('/product',getAll_Json);
+        //ruta para las vista de producto del lado del frontend
 router.get('/product/:id',checkProduct,getOne_Json);
             //api database
 router.get('/api/product',getAll);

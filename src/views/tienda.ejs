@@ -22,20 +22,20 @@
             <button ><a class="btn btn-primary" href="/cart" >Ver Carrito</a></button>
             </div>
         <div class="seccion-cuerpo">
-            <% products.forEach(product => { %> <div class="A" > <br>
+            <% products.forEach(product => { %> <div class="A">
                 <div class="img"><img src="<%- product.img %>" alt="Imagen del producto">
                 </div>
                 <div class="detalle-de-producto">
                     <div class="detalle-de-compra">
                         <h5 class="productName"><%- product.productName %></h5>
-                        <h6 class="price"><%- '$ '+product.price %></h6>
+                        <h6 class="price"><%- '$ ' + product.price %></h6>
                     </div>
                     <br>
                     <div class="texto"><span><%- product.description %>
                     </span></div>
                     <br>
                     <div class="btn">
-                        <button onclick="renderizarCarrito(event)" id="btn-add" class="add-cart" type="submit"><img class="add-cart" src="imagenes/shopping-cart_icon-icons.com_72552.png"></button>
+                        <button onclick="renderizarCarrito('<%- product.id %>')"  class="add-cart" type="submit"><img class="add-cart" src="imagenes/shopping-cart_icon-icons.com_72552.png"></button>
                         <button type="submit"><a href="/details-product"></a> Detalles</button>
                     </div>
                 </div>

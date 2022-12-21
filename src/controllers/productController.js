@@ -63,10 +63,7 @@ const getOneProduct = async (req, res) => {
                     message: 'no Product found'
                 });
             }
-            return res.status(200).json({
-                status: 'success',
-                data: AllProducts
-            });
+            return res.send(AllProducts);
         })
         .catch(err => {
             return res.status(500).json({

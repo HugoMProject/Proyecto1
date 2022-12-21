@@ -22,9 +22,9 @@ body{
        
         height: auto;
         border: 1px solid  black;
-         border-radius: 9px; 
-         padding: 10px;
-
+        border-radius: 9px; 
+        padding: 10px;
+        box-shadow: 8px 5px 2px 1px rgba(0, 0, 0, 0.2); 
     }
     section .seccion-cuerpo{
         width: 95%;
@@ -34,7 +34,7 @@ body{
         display: flex;
         flex-direction: column;
         align-items: center;
-
+        box-shadow: 8px 5px 2px 1px rgba(0, 0, 0, 0.2); 
     }
     section .A{ 
         display: flex;
@@ -133,17 +133,18 @@ body{
         border: 1px solid  black;
         border-radius: 9px; 
         padding: 10px;
-
+        box-shadow: 8px 5px 2px 1px rgba(0, 0, 0, 0.2); 
     }
     
     section .seccion-cuerpo{
+        width: 100%;
         margin-top: 5px;
         margin-bottom: 5px;
         display: flex;
         flex-direction:row;
         flex-wrap:wrap;
         align-items:stretch;
-        justify-content: space-evenly; 
+        justify-content: space-evenly;
         
     }
     section .A{ 
@@ -160,18 +161,22 @@ body{
         margin-left: 5px;
         margin-right: 5px;
         padding: 5px;
+        box-shadow: 8px 5px 2px 1px rgba(0, 0, 0, 0.2); 
     }
     section .A .img{
         background-size: contain;
-        width: auto;
+        width: 100%;
         height: 200px;
+        margin-bottom: 15px;
     }
     section .A .img img{
-        background-size: cover;
+        background-size:contain;
+        width: 100%;
     }
     section .detalle-de-producto{
         display: flex;
         width: 500px;
+        margin-top: 15px;
         flex-direction: column;
         align-items: center;
         
