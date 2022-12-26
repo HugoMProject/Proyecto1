@@ -72,13 +72,13 @@ body{
         margin-left: 5%;
         margin-right: 5%;
     }
-    section .detalle-de-producto .btn{
+    section .detalle-de-producto .Btn{
         display: flex;
         width: 100%;
         margin-left: 5%;
         margin-right: 5%;
     }
-    section .detalle-de-producto .btn button{
+    section .detalle-de-producto .Btn button{
         text-align: center;
         font-size: 20px;
         font-family: inherit;
@@ -96,17 +96,18 @@ body{
         
         
     }
-    section .detalle-de-producto .btn button img{
+    section .detalle-de-producto .Btn button img{
+        z-index: -1;
         width: 30px;
         height: 33px;
         margin-top: 4px;
     }
-    section .detalle-de-producto .btn button a{
+    section .detalle-de-producto .Btn button a{
         width: 30px;
         height: 33px;
         margin-top: 4px;
     }
-    section .detalle-de-producto .btn button:hover{
+    section .detalle-de-producto .Btn button:hover{
         background-color: transparent;
         color: rgba(12, 76, 242, 0.8);
         transition: 0.6s;
@@ -211,12 +212,13 @@ body{
         /* margin-left: 10px;
         margin-right: 10px; */
     }
-    section .detalle-de-producto .btn{
+    section .detalle-de-producto .Btn{
         display: flex;
         margin-left: 20px;
         margin-right: 20px;
     }
-    section .detalle-de-producto .btn button{
+    section .detalle-de-producto .Btn button{
+        z-index: 1;
         font-size: 18px;
         font-family: inherit;
         text-transform:uppercase;
@@ -235,12 +237,13 @@ body{
 
 
     }
-    section .detalle-de-producto .btn button img{
+    section .detalle-de-producto .Btn button img{
+        z-index: -1;
         width: 30px;
         height: 30px;
     }
     
-    section .detalle-de-producto .btn button:hover{
+    section .detalle-de-producto .Btn button:hover{
         background-color: transparent;
         color: rgba(12, 76, 242, 0.8);
         transition: 0.6s;

@@ -92,6 +92,7 @@
        
     }
     .cabecera-principal{
+        height: 70px;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
@@ -109,13 +110,14 @@
     .links{
         display: flex;
         justify-content: space-between;
-        
+        margin-top: 1%;
 
     }
 
     .links li{
         list-style: none; 
         font-size: 25px;
+        font-family: initial;
     }
     header nav ul li a{
         text-decoration: none;
@@ -135,7 +137,7 @@
         color:#014ba0;
         background-color: white;
         border: solid #014ba0 2px;
-        border-radius: 20px;
+        border-radius: 30px;
         padding: 7px;
         padding-right:30px ;
         padding-left:30px ;

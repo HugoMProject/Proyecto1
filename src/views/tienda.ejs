@@ -19,7 +19,7 @@
                 <p class="text-right">Total: <span id="total"></span>&dollar;</p>
             </div>
             <button id="btn-vaciar" class="btn btn-danger">Vaciar</button>
-            <button ><a class="btn btn-primary" href="/cart" >Ver Carrito</a></button>
+            <button class="btn btn-primary"><a style="color:white;text-decoration: none;" href="/cart" >Ver Carrito</a></button>
             </div>
         <div class="seccion-cuerpo">
             <% products.forEach(product => { %> <div class="A">
@@ -34,9 +34,8 @@
                     <div class="texto"><span><%- product.description %>
                     </span></div>
                     <br>
-                    <div class="btn">
-                        <button onclick="renderizarCarrito('<%- product.id %>')"  class="add-cart" type="submit"><img class="add-cart" src="imagenes/shopping-cart_icon-icons.com_72552.png"></button>
-                        <button type="submit"><a href="/details-product"></a> Detalles</button>
+                    <div class="Btn">
+                        <button productId="<%- product.id %>" class="add-cart" type="submit">Add Cart</button>
                     </div>
                 </div>
 

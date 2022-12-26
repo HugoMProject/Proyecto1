@@ -9,29 +9,23 @@
   
 <body>
 
-    <header>
-        <%- include('partials/header')  %>
-        <link rel="stylesheet" href="css/cart.css">
+  <header>
+    <%- include('partials/header')  %>
+    <link rel="stylesheet" href="css/cart.css">
 </header>
-    <H1>Carrito</H1>
-              <section style="width: 70%;">
-                <div class="containers px-4" >
-                  <div class="row main">
-                      <!-- Carrito -->
-                          
-                          <hr>
-                          <!-- Precio total -->
-                          <p class="text-right">Total: <span id="total"></span>&euro;</p>
-                          <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
-                  </div>
+<H1>Carrito</H1>
+          <section >
+            <div class="containers px-4 cuerpo" >
+              <div class="row main cart-container "> 
               </div>
-                
-        </section>
+          </div>
+            
+    </section>
 
-        
-        <footer>
-            <%- include('partials/footer')  %> 
-        </footer>
+    
+    <footer>
+        <%- include('partials/footer')  %> 
+    </footer>
         
    
 </body>

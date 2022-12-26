@@ -66,6 +66,10 @@ body{
         font-weight: 600;
 
     }
+    .cuerpo-banner .botones button a {
+        text-decoration: none;
+
+    }
     /* 
        Estamos en la parte de seccion clase cuerpo
        background: rgba(12, 76, 242, 0.8);color azul 

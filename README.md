@@ -1,6 +1,6 @@
 
 
-E-COMMERCE SERVICIOS ESTRUCTURALES Y TECNOLOGICOS
+=====================E-COMMERCE SERVICIOS ESTRUCTURALES Y TECNOLOGICOS========================================
 
 
     HISTORIA
@@ -30,17 +30,14 @@ https://fonts.google.com/specimen/Frank+Ruhl+Libre
     COLOR:#5b7dcf
 
 
-    CREACION DE LOGO
-
-    EL LOGO TODAVIA ESTA EN DISEÑO
 
 
  FIGMA
  https://www.figma.com/file/zWBSSwSvVoxkhdd4oSdnuH/proyecto1?node-id=0%3A1
 
+====================================HERRAMIENTAS================================================================ 
 
-
-DEPENDENCIAS
+====================================DEPENDENCIAS==================================================
 
         bcrypt: ^5.0.1,
         body-parser: ^1.20.1,
@@ -53,11 +50,13 @@ DEPENDENCIAS
         mysql2: ^2.3.3,
         sequelize: ^6.25.5
  
-DevDependencies 
+================================0DevDependencies================================= 
 
         nodemon:"^2.0.19"
 
+========================Para iniciar el proyecto de instalar las dependencias necesarias===================
+========================Con el comando npm install=================================================
+=========================luego utiliza los scripts para inicializarlo========================================
+======================scripts para iniciar el proyecto====================================================
 
-scripts para iniciar el proyecto
-
-    npm run start:dev
+   ===================== npm run start:dev  ===================
