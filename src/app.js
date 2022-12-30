@@ -6,7 +6,7 @@ const app = express();
 const session = require('express-session');
 const cookie = require('cookie-parser');
 const db = require("../models");
-
+const cors = require('cors')
 db.sequelize
   .sync()
   .then(() => {
@@ -19,6 +19,7 @@ db.sequelize
 app.set('view engine', 'ejs');
 app.set('views' , __dirname + '/views');
 
+app.use(cors());
 app.use(express.static(path.join(__dirname + '/public')));
 app.use('/desktop',express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({extended: true}));
