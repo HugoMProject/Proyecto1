@@ -2,23 +2,32 @@ const DOMcarrito = document.querySelector('#list'); // ul
 const DOMdivCarrito = document.querySelector('seccion-cuerpo'); // ul
 const DOMprod = document.querySelector('.main'); // ul
 const DOMtotal = document.querySelector('#text-right');  //p
+
 const DOMbotonagredar = document.querySelectorAll('.add-cart');// boton de añadir
 const DOMdivcart = document.querySelector('.div-cart');// div contenedor de productos del carrito en tienda
 // Creamos una variable para almacenar el carrito en localStorage
 let carrito = JSON.parse(localStorage.getItem("carrito"));
+let see_more_details_product = JSON.parse(localStorage.getItem("see_more_details_product"));
 // Si el carrito en localStorage no existe, entonces lo creamos como un array vacio
 if(!carrito) {
     carrito = [];
 }
+if(!see_more_details_product) {
+  see_more_details_product = [];
+}
 
 // Capturamos el contenedor de productos de la vista del carrito
 let productsContainer = document.querySelector(".cart-container");
-
+let containerDetailProduct = document.querySelector('.seccion-cuerpo-detailsProduct');
 // CODIGO PARA MOSTRAR PRODUCTOS EN EL CARRITO
 // Hacemos un condicional para agregar el addEventListener si es que el elemento existe
 if(productsContainer) {
     productsContainer.addEventListener('click', showProducts());
 }
+if(containerDetailProduct) {
+  containerDetailProduct.addEventListener('click', showDetailproduct());
+}
+
 // Funcion para mostrar productos en el carrito
 async function showProducts() {
     // Llamo el array "carrito" del localStorage y declaro un array vacio llamado "arrayProducts"
@@ -86,8 +95,7 @@ if(addCart) {
       }
     });
   }
-}
-
+};
 // Función para añadir productos al carrito
 function addToCart(productId) {
   // Comprobamos si el producto ya se encuentra en el carrito
@@ -112,8 +120,68 @@ function addToCart(productId) {
     console.log('producto nuevo agregado!');
     location.reload();
   }
+};
+let seeMoreDetails = document.querySelectorAll('.see-more');
+if(seeMoreDetails) {
+  for(let botton of seeMoreDetails) {
+    botton.addEventListener('click', function(e) {
+      let productId = e.target.getAttribute('detailsProductId');
+      if(productId) {
+        seeMore(productId);
+      }
+    });
+  }
+}
+// Función para añadir productos al carrito
+function seeMore(productId) {
+
+  // agregamos el id el localstorage para poder hacer uso de el
+  see_more_details_product.push({
+    id: productId
+  });
+
+  localStorage.setItem("see_more_details_product", JSON.stringify(see_more_details_product));
 }
 
+//mostramos el producto seleccioinado el el detalle de producto
+//de manera dinamica
+async function showDetailproduct(){
+  let see_more_details_product = JSON.parse(localStorage.getItem('see_more_details_product'));
+    let show_Detail_products = [];
+    for(let item of see_more_details_product){
+  await fetch(`http://localhost:3000/api/getone/product/${item.id}`)
+          .then(res => res.json())
+            .then(data=>{
+              const {productName, price, description, img } = data;
+              show_Detail_products.push({
+                  productName,
+                  price,
+                  description,
+                  img
+
+              })
+            });
+      };    
+  for (let product of show_Detail_products) {
+    let showDetailproductHTML = `<div class="img"><img src=${product.img} alt="Imagen del producto">
+    </div>
+    <div class="detalle-de-producto">
+        <div class="detalle-de-compra">
+            <h5>${product.productName}</h5>
+            <h6>$${product.price}</h6>
+        </div>
+        <br>
+        <div class="texto"><span>${product.description}</span>
+          </div>
+        <br>
+        <div class="btn">
+            <button type="submit"><a class="add-cart" style="color:white;text-decoration: none;">add cart</a></button>
+            <button type="submit"><a style="color:white;text-decoration: none;" href="/cart" >cart</a></button>
+        </div>`
+        containerDetailProduct.innerHTML = showDetailproductHTML;
+      }    
+           
+};
 
 // Funcion para mostrar los productos en el carrito en la vista de Tienda
 // Agregamos un add event listener al div-cart para que cuando cargue, ejecute la funcion showProductsCartInStore
@@ -181,3 +249,7 @@ function vaciarCarrito() {
     localStorage.clear();
     location.reload();
 }
+
+
+
+

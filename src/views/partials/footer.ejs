@@ -10,8 +10,8 @@
                 </div>
                 
                 <ul class="links-pieDePagina">
-                    <li><a href="">Ayuda</a></li>
-                    <li><a href="">Nosotros</a></li>   
+                    <li><a id="linkHelp" href="#">Ayuda</a></li>
+                    <li><a href="/aboutUs">Nosotros</a></li>   
                 </ul>
                 <ul class="Redes">
                     <li><a href=""><span><img src="imagenes/twitter-3_icon-icons.com_50735.png"></span></a></li> 
@@ -25,5 +25,15 @@
             <h5>Copy right 2022</h5>
             <h5><a href="">Terminos y Condiciones</a></h5>
         </div>
+
+        <script>
+                let btn = document.querySelector('#linkHelp')
+                
+                btn.addEventListener('click', ayuda);
+                function ayuda(e){
+                    e.preventDefault();
+                    alert('De momento no contamos con soperte tecnico!!... lo sentimos....')
+                }
+        </script>
     </footer>
 

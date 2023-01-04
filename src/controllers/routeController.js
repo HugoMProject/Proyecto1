@@ -35,8 +35,8 @@ const renderLoginView = (req, res) =>{
           res.render('login');
 };
 const renderDetailsProduct = (req, res) =>{
+    Products.findByPk().then( products =>{res.render('details-product', { products : products  })});
 
-    res.render('details-product')
 
 };
 const renderRegisterView = (req, res) =>{

@@ -2,6 +2,7 @@
 const formulario = document.getElementById('form');
 const formulario1 = document.querySelector('.formLogin');
 const inputs = document.querySelectorAll('#form input');
+const ForgetPassword = document.querySelector('#btn-forgetPassword');
 
 const expression = { //         expresiones regulares, para permitir solo ciertos caracteres.S
     name: /^[a-zA-ZÀ-ÿ\s\_\-]{1,40}$/,            
@@ -92,3 +93,9 @@ formulario1.addEventListener('submit', (e)=>{
     }
 
 });
+
+ForgetPassword.addEventListener('click', forgetPassword)
+function forgetPassword(e){
+    e.preventDefault();
+    alert('Los sentimos.... En estos Momentos no te podemos ayudar');
+}

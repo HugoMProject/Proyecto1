@@ -152,6 +152,39 @@ const deleteProduct = async (req, res) => {
     });
   }
 };
+
+// falta hacer el controlador del metodo para eliminar todo
+const deleteAllProduct = async (req, res) => {
+  // Obtenemos el ID del producto a eliminar desde la solicitud
+  const productId = req.params.id;
+  try {
+    // Eliminamos el producto con el ID especificado
+    const deletedAllProduct = await product.truncate({
+      where: {
+        id: productId
+      }
+    });
+    if (deletedAllProduct) {
+      // Si se eliminó el producto, devolvemos un código HTTP 200 (OK)
+      // junto con la información del producto eliminado
+      res.status(200).json(deletedAllProduct);
+    } else {
+      // Si no se eliminó el producto, es posible que no exista un producto
+      // con el ID especificado. En este caso, devolvemos un código HTTP 404
+      // (Not Found)
+      res.status(404).json({
+        message: 'Product not found'
+      });
+    }
+  } catch (error) {
+    // Si ocurre un error al intentar eliminar el producto, devolvemos un
+    // código HTTP 500 (Internal Server Error) junto con el error
+    res.status(500).json({
+      message: 'Error deleting product',
+      error: error
+    });
+  }
+};
 module.exports = {
   getAll_Json,
   getOne_Json,
@@ -159,7 +192,8 @@ module.exports = {
     getOneProduct,
     editProduct,
     createProduct,
-    deleteProduct
+    deleteProduct,
+    deleteAllProduct
 
     
     

@@ -31,11 +31,9 @@
                         <h6 class="price"><%- '$ ' + product.price %></h6>
                     </div>
                     <br>
-                    <div class="texto"><span><%- product.description %>
-                    </span></div>
-                    <br>
                     <div class="Btn">
                         <button productId="<%- product.id %>" class="add-cart" type="submit">Add Cart</button>
+                        <button  type="submit"><a detailsProductId="<%- product.id %>" class="see-more"  style="color:black;text-decoration: none;" href="/details-product">See More</a></button>
                     </div>
                 </div>
 

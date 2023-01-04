@@ -82,10 +82,7 @@ const createUser = async (req,res) => {
           const user = await User.create(
               newUser 
               );
-          return res.status(201).json({
-              message:"User created successfully",
-              user
-          });
+          return res.redirect('/login');
       } catch (error) {
           return res.status(500).json({
               message:"Server error",
@@ -103,12 +100,10 @@ const createUser = async (req,res) => {
 
 const validatorLoginUser_db = async (req,res) => {
   // Primero, comprobamos si existe una cookie de sesión en la solicitud
-  console.log("cookie ",req.signedCookies.session);
   if (req.cookies.session) {
     // Si existe una cookie de sesión, significa que el usuario ha iniciado sesión previamente y
     // que su sesión se ha guardado en una cookie. En este caso, podemos simplemente devolver
     // un código de estado 200 y la información del usuario como respuesta a la solicitud.
-    console.log(req.cookies.session);
     res.status(200).json(req.user);
   } else {
     // Si no existe una cookie de sesión, significa que el usuario no ha iniciado sesión previamente
@@ -120,11 +115,10 @@ const validatorLoginUser_db = async (req,res) => {
 
       // Llamamos a la función de inicio de sesión que acabamos de ver
       const user = await login(email, password);
-      console.log(user)
       // Si la autenticación es correcta, podemos guardar la sesión del usuario en una cookie
       // y devolver un código de estado 200 y la información del usuario como respuesta a la solicitud
       res.cookie('session', user.session, { httpOnly: true, signed: true });
-      res.status(200).json(user);
+      res.redirect('/');
     } catch (error) {
       // Si hay algún error, lo capturamos y devolvemos un código de estado 401 (no autorizado) y el mensaje de error
       res.status(401).json({ message: error.message });

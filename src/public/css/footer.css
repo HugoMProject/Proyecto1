@@ -152,17 +152,16 @@
 @media(min-width:750px) {
    
     footer{
+        height: 150px;
         width: auto;       
         margin: 0px auto;
         margin-top: 20px;
-        padding-top: 15px;
-        padding-bottom: 8px;
-        background: rgba(12, 76, 242, 0.8);;
+        background: rgba(12, 76, 242, 0.8);
        
     }
     footer .pieDePagina-conteiner{
         margin: 0px auto;
-        padding: 0px;
+        padding: 8px;
         display: flex;
         justify-content: space-around;
         flex-direction: row;

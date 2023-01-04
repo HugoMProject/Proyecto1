@@ -15,7 +15,7 @@ router.get('/aboutUs', renderaboutUsView);
 
 router.get('/tienda',  renderTiendaView);
 
-router.get('/details-product',  renderDetailsProduct);
+router.get('/details-product', renderDetailsProduct);
 
 router.get('/login', renderLoginView);
 router.post('/login',loginValidator, processLogin);//  login for json
