@@ -3,7 +3,6 @@ const mysql =  require('mysql2');
 const bcrypt = require('bcrypt');
 const { validationResult } = require('express-validator');  
 const db = require("../../models");
-const { connect } = require('http2');
 const User = db.users;
 
 //      controller for json            CREAR USUARIOS PARA EL JSON
@@ -89,26 +88,9 @@ const createUser = async (req,res) => {
               error
           });
       }
-  };
-    
- 
-    
-     
- 
- 
-   
+  };   
 
 const validatorLoginUser_db = async (req,res) => {
-  // Primero, comprobamos si existe una cookie de sesión en la solicitud
-  if (req.cookies.session) {
-    // Si existe una cookie de sesión, significa que el usuario ha iniciado sesión previamente y
-    // que su sesión se ha guardado en una cookie. En este caso, podemos simplemente devolver
-    // un código de estado 200 y la información del usuario como respuesta a la solicitud.
-    res.status(200).json(req.user);
-  } else {
-    // Si no existe una cookie de sesión, significa que el usuario no ha iniciado sesión previamente
-    // o que su sesión no se ha guardado en una cookie. En este caso, debemos autenticar al usuario
-    // utilizando su dirección de correo electrónico y contraseña como normalmente lo haríamos.
     try {
       // Primero, obtenemos la dirección de correo electrónico y la contraseña del cuerpo de la solicitud
       const { email, password } = req.body;
@@ -117,13 +99,30 @@ const validatorLoginUser_db = async (req,res) => {
       const user = await login(email, password);
       // Si la autenticación es correcta, podemos guardar la sesión del usuario en una cookie
       // y devolver un código de estado 200 y la información del usuario como respuesta a la solicitud
-      res.cookie('session', user.session, { httpOnly: true, signed: true });
+      res.cookie('session', user.session, {secret:'123holamundo', maxAge: 1000 * 60 * 60 * 24 ,httpOnly: true, signed: true });
       res.redirect('/');
     } catch (error) {
       // Si hay algún error, lo capturamos y devolvemos un código de estado 401 (no autorizado) y el mensaje de error
       res.status(401).json({ message: error.message });
+    }};
+  
+// autentificar para angular
+const validatorAuthLoginUser_db = async (req,res) => {
+    try {
+      // Primero, obtenemos la dirección de correo electrónico y la contraseña del cuerpo de la solicitud
+      const { email, password } = req.body;
+
+      // Llamamos a la función de inicio de sesión que acabamos de ver
+      const user = await loginAngular(email, password);
+      
+      // Si la autenticación es correcta, podemos guardar la sesión del usuario en una cookie
+      // y devolver un código de estado 200 y la información del usuario como respuesta a la solicitud
+      res.cookie('session', user.session, {secret:'123holamundo', maxAge: 1000 * 60 * 60 * 24 ,httpOnly: true, signed: true });
+      res.status(200).send(user);
+    } catch (error) {
+      // Si hay algún error, lo capturamos y devolvemos un código de estado 401 (no autorizado) y el mensaje de error
+      res.status(401).json({ message: error.message });
     }
-  };
     
 };
 async function login(email, password) {
@@ -140,12 +139,45 @@ async function login(email, password) {
 
   // Si la contraseña es incorrecta, devolvemos un error
   if (!isPasswordCorrect) {
-    throw new Error('Contraseña incorrecta');
+    throw new Error('Contraseña incorrecta o Email incorrecto');
   }
 
   // Si llegamos hasta aquí, significa que la dirección de correo electrónico y la contraseña son correctas,
-  // por lo que podemos autenticar al usuario y devolver su información
-  return user;
+  // por lo que podemos autenticar al usuario y devolver su información.
+  //solo los datos necesarios para poder autenticar
+  let userInfo = {
+    name: user.name,
+    lastname: user.lastname,
+    email: user.email,
+} 
+  return userInfo;
+};
+async function loginAngular(email, password) {
+  // Primero, buscamos al usuario en la base de datos utilizando su dirección de correo electrónico
+  const user = await User.findOne({ where: { email: email } });
+
+  // Si el usuario no existe, devolvemos un error
+  if (!user) {
+    throw new Error('Usuario no encontrado');
+  }
+
+  // Luego, comparamos la contraseña que el usuario ha proporcionado con la contraseña almacenada en la base de datos
+  const isPasswordCorrect = await bcrypt.compare(password, user.password);
+
+  // Si la contraseña es incorrecta, devolvemos un error
+  if (!isPasswordCorrect) {
+    throw new Error('Contraseña incorrecta o Email incorrecto');
+  }
+
+  // Si llegamos hasta aquí, significa que la dirección de correo electrónico y la contraseña son correctas,
+  // por lo que podemos autenticar al usuario y devolver su información.
+  //solo los datos necesarios para poder autenticar
+  let userInfo = [
+    {name: user.name},
+    {lastname: user.lastname},
+    {email: user.email}
+    ]
+  return userInfo;
 };
 
-module.exports = {processLogin,processRegister, createUser,validatorLoginUser_db}
+module.exports = {processLogin,processRegister, createUser,validatorLoginUser_db,validatorAuthLoginUser_db}

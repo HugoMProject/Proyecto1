@@ -3,7 +3,7 @@ const express = require('express');
 const { renderHomeView, renderaboutUsView,  renderTiendaView, renderLoginView, renderCartView, renderRegisterView, renderDetailsProduct} = require('../controllers/routeController');
 const registerValidator = require('../middlewares/registerValidator');
 const router = express.Router();
-const {processLogin, createUser, processRegister, validatorLoginUser_db } = require('../controllers/UsersController');
+const {processLogin, createUser, processRegister, validatorLoginUser_db, validatorAuthLoginUser_db } = require('../controllers/UsersController');
 const { getAll, createProduct,  getOneProduct, editProduct, deleteProduct, getAll_Json, getOne_Json} = require('../controllers/productController');
 const loginValidator = require('../middlewares/login');
 const checkCookie = require('../middlewares/checkCookie');
@@ -20,6 +20,7 @@ router.get('/details-product', renderDetailsProduct);
 router.get('/login', renderLoginView);
 router.post('/login',loginValidator, processLogin);//  login for json
 router.post('/api/login',loginValidator, validatorLoginUser_db);// login for database
+router.post('/api/login/auth',loginValidator, validatorAuthLoginUser_db);// login for database
 
 router.get('/register', renderRegisterView);
 router.post('/register', registerValidator,processRegister);// create user for json
