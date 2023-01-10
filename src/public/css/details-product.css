@@ -5,13 +5,10 @@ body{
 
     
 }
-@media(max-width:750px){
-    .cabecera{
-        height: 55px;
-    }
+@media(max-width:700px){
      section h1{
-        margin-top: 70px;
-        margin-bottom: 40px;      
+        margin-top: 80px;
+        margin-bottom: 30px;      
         text-align: center;
         font-size: 20px;
         text-transform: uppercase;

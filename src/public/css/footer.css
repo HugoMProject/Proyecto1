@@ -2,6 +2,7 @@
 
 @media(max-width:750px)and (orientation:portrait){
     footer{
+        overflow: hidden;
         position:static;
         width: auto;
         height: 389px;       

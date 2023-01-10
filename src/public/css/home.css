@@ -11,9 +11,9 @@ body{
 */
 @media(max-width:750px){
     .banner{
-        margin-top: 0px;
+        margin-top: 50px;
         margin-bottom: 10px;
-        padding-top: 50px;
+        padding-top: 50px;;
         padding-bottom: 50px;
         background-image: url('/imagenes/fondo-de-baner2.jpg');
         background-repeat: no-repeat;

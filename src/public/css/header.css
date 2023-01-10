@@ -9,31 +9,35 @@
         mobile first
 */
 
-@media(max-width:700px)and (orientation:portrait){
+@media screen and (max-width:700px)and (orientation:portrait){
     *{
         overflow-x:auto ;
     
     }
     header{
-        width: auto;
-        margin: 0px auto;
+        width: 100%;
+        margin: 0;
         background-color: #0C4CF2;
-       
+        position: fixed;
+        z-index: 1;
     }
     .cabecera-principal{
         display: flex;
         justify-content: space-evenly;
         align-items: center;
         
+        
     }
     header nav {
         width: auto;
         margin: 0px auto;
         padding: 0px;
+        border-bottom: 1px solid white;
     }
     header nav div{
         margin: 0px auto;
         padding: 0px;
+
     }
     
     header nav div .logo{
@@ -79,12 +83,43 @@
        opacity: 70%;
        transition: 0.6s;
     }
+    .menu-off{
+        display: none;
+        transition: all 0.8s;
+    }
+    header .menu-btn-plegable .links-menu-plegable{
+        height: 100%;
+
+    }
+        header .menu-btn-plegable .links-menu-plegable li{
+        border-bottom: 0.5px solid white;
+        text-align: center;
+        margin: 5px;
+        height: 65px;
+    }
+     .menu-btn-plegable .links-menu-plegable li a{
+        text-decoration: none;
+        color: black;
+        font-size: 30px;
+
+    }
+    header .menu-btn-plegable .links-menu-plegable li:hover{
+        background-color: #014ba0;
+        color:white;
+        width: 95%;
+        transition: all 0.5s;   
+    }
+
+    header .menu-btn-plegable .links-menu-plegable li a:hover{
+        color:white;
+        transition: all 0.5s;   
+    }
 }
 /*
         Media laptop
 */
 
-@media(min-width:700px) {
+@media(min-width:680px) {
     header{
         width: auto;
         margin: 0px auto;
@@ -156,5 +191,8 @@
         top:10px;
         height: 50px;
         align-items: center;
+    }
+    header .menu-btn-plegable{
+        display: none;
     }
 }

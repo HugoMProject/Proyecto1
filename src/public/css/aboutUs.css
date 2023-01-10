@@ -1,0 +1,87 @@
+@import url(https://fonts.google.com/specimen/Frank+Ruhl+Libre);
+body{
+    margin: 0px;
+    padding: 0px;
+
+    
+}
+@media(max-width:700px){
+     section h1{
+        margin-top: 80px;
+        margin-bottom: 30px;      
+        text-align: center;
+        font-size: 20px;
+        text-transform: uppercase;
+    }
+    section .seccion-cuerpo{
+        width: 90%;
+        height: 100%;
+        margin-top: 80px;
+        margin-bottom:100px ;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+    section .seccion-cuerpo .detalle-nosotros{
+        display: flex;
+        width: 80%;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    section .seccion-cuerpo .detalle-nosotros div div p{
+        font-size: 20px;
+        align-items: center;
+        
+    }
+    section .seccion-cuerpo img{
+        width: 80%;  
+    }
+
+}
+@media(min-width:750px){
+    section{
+        width: 90%;
+        height: 100%;
+        overflow: hidden;
+        margin-left: 3.5em;
+        margin-right: 3em;
+    }
+    section h1{
+        margin-top: 70px;
+        margin-bottom: 60px;      
+        text-align: center;
+        font-size: 40px;
+        text-transform: uppercase;
+    }
+    section .seccion-cuerpo{
+        width: 90%;
+        margin-top: 100px;
+        margin-bottom: 10px;
+        margin-left:3rem ;
+        margin-right:2rem ;
+        display: flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content: space-evenly; 
+    }
+    section .seccion-cuerpo img{ 
+        width: 80%;
+        margin-top: 5px;
+        margin-bottom: 15px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    section .seccion-cuerpo .detalle-nosotros{
+        display: flex;
+        width: 80%;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    section .seccion-cuerpo .detalle-nosotros div div p{
+        font-size: 20px;
+        align-items: center;
+    }
+}
