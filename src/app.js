@@ -1,12 +1,14 @@
 'use stric'
 const path = require("path");
 const express = require("express");
+require('dotenv').config();
 const bodyParser = require('body-parser');
 const app = express();
 const session = require('express-session');
 const cookie = require('cookie-parser');
 const db = require("../models");
 const cors = require('cors')
+const port = process.env.PUERTO || 3000;
 db.sequelize
   .sync()
   .then(() => {
@@ -40,5 +42,5 @@ app.use((req,res,next)=>{
     res.status(400).render('notFound')
 })
 
-app.listen(3000,() => console.log('servidor iniciado en el puerto 3000'))
+app.listen(port,() => console.log(`serve in port ${port}`))
 

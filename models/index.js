@@ -1,4 +1,5 @@
 'use strict';
+
 //                          modelo por defecto de sequelize
 // const fs = require('fs');
 // const path = require('path');
@@ -32,7 +33,6 @@
 //   }
 // });
 const dbConfig = require("../config/config.js");
-
 const Sequelize = require("sequelize");
 const sequelize = new Sequelize(dbConfig.DB, dbConfig.USER, dbConfig.PASSWORD, {
   host: dbConfig.HOST,

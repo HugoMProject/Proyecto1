@@ -1,9 +1,10 @@
+require('dotenv').config();
 module.exports = {
 
-  HOST: "localhost",
-  USER: "root",
-  PASSWORD: "root",
-  DB: "e_commerce1",
+  HOST: process.env.HOST,
+  USER: process.env.ENV_USER,
+  PASSWORD: process.env.ENV_PASSWORD,
+  DB: process.env.ENV_DB,
   dialect: "mysql",
   pool: {
     max: 5,
@@ -11,6 +12,10 @@ module.exports = {
     acquire: 30000,
     idle: 10000,
   }, 
+
+}
+
+ 
   //                      modelo por defencto de sequelize
   // "development": {
   //   "username": "root",
@@ -33,4 +38,3 @@ module.exports = {
   //   "host": "127.0.0.1",
   //   "dialect": "mysql"
   // }
-}
