@@ -156,13 +156,11 @@ const deleteProduct = async (req, res) => {
 // falta hacer el controlador del metodo para eliminar todo
 const deleteAllProduct = async (req, res) => {
   // Obtenemos el ID del producto a eliminar desde la solicitud
-  const productId = req.params.id;
+  // const productId = req.params.id;
   try {
     // Eliminamos el producto con el ID especificado
-    const deletedAllProduct = await product.truncate({
-      where: {
-        id: productId
-      }
+    const deletedAllProduct = await db.products.destroy({
+      truncate: true
     });
     if (deletedAllProduct) {
       // Si se eliminó el producto, devolvemos un código HTTP 200 (OK)

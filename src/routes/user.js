@@ -4,7 +4,7 @@ const { renderHomeView, renderaboutUsView,  renderTiendaView, renderLoginView, r
 const registerValidator = require('../middlewares/registerValidator');
 const router = express.Router();
 const {processLogin, createUser, processRegister, validatorLoginUser_db, validatorAuthLoginUser_db } = require('../controllers/UsersController');
-const { getAll, createProduct,  getOneProduct, editProduct, deleteProduct, getAll_Json, getOne_Json} = require('../controllers/productController');
+const { getAll, createProduct,  getOneProduct, editProduct, deleteProduct, getAll_Json, getOne_Json, deleteAllProduct} = require('../controllers/productController');
 const loginValidator = require('../middlewares/login');
 const checkCookie = require('../middlewares/checkCookie');
 const checkProduct = require('../middlewares/checkProduct');
@@ -36,6 +36,7 @@ router.get('/api/product',getAll);
 router.get('/api/getone/product/:id',checkProduct,getOneProduct);
 router.put('/api/update/product/:id',checkProduct,editProduct);
 router.delete('/api/delete/product/:id',checkProduct,deleteProduct);
+router.delete('/api/deleteAll/product',checkProduct,deleteAllProduct);
 router.post('/api/create/product',checkProduct,createProduct);
 
 
