@@ -8,6 +8,7 @@ const { getAll, createProduct,  getOneProduct, editProduct, deleteProduct, getAl
 const loginValidator = require('../middlewares/login');
 const checkCookie = require('../middlewares/checkCookie');
 const checkProduct = require('../middlewares/checkProduct');
+const verifyToken = require('../middlewares/checkToken')
 
 router.get('/',checkCookie ,renderHomeView);
 
@@ -38,10 +39,11 @@ router.put('/api/update/product/:id',checkProduct,editProduct);
 router.delete('/api/delete/product/:id',checkProduct,deleteProduct);
 router.delete('/api/deleteAll/product',checkProduct,deleteAllProduct);
 router.post('/api/create/product',checkProduct,createProduct);
-
-
-
-
+// ruta para verificar el token 
+router.get('/protected-route', verifyToken, (req, res) => {
+        // Aquí puedes acceder al ID del usuario a través de req.userId
+        res.status(200).send(true);
+      });
 
 
 module.exports = router;
