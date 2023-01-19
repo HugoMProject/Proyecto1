@@ -1,2 +1,4 @@
 node_modules/
-.env/
+#ignoramos todos los archivos que terminan en .env exepto ejemplo.env
+*.env
+!ejemplo.env
