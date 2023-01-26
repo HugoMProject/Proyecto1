@@ -260,8 +260,10 @@ body{
             Estamos en la seccion de Nosotros
     */
     .nosotros{
+        height: 400px;
+        width: 100%;
         margin: 0px;
-        background-image: url('/imagenes/persona-pensando.jpg');
+        background-image: url('/imagenes/mujer-pensando.png');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -307,7 +309,7 @@ body{
     }
     
 }
-@media(min-width:750px){
+@media(min-width:751px){
     .banner{
         max-width: 100%;
         margin-top: 0px;
@@ -409,7 +411,7 @@ body{
         align-items: center ;
         margin-top: 80px;
         margin-bottom: 50px;
-        width: 280px;
+        width: 80%;
         height: 290px;
         
     }
@@ -418,7 +420,7 @@ body{
         display: flex;
         align-items: center;
         padding: 30px;
-        width: 235px;
+        width: 70%;
         height: 248px;
         margin-bottom: 17.15px;
         border-radius: 20px;
@@ -593,7 +595,7 @@ body{
         width: auto;
         height: 900px;
         margin-top:150px;
-        background-image: url('/imagenes/persona-pensando.jpg');
+        background-image: url('/imagenes/mujer-pensando.png');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;

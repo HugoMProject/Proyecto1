@@ -9,7 +9,7 @@ body{
 
 @media(max-width:700px){
     h1{
-        margin-top: 35px;
+        margin-top: 80px;
         text-align: center;
         font-size: 35px;
         font-family: inherit;
@@ -17,14 +17,15 @@ body{
         text-transform: uppercase;
     }
     .cuerpo{
-        max-width: 360px;
+        max-width: 60%;
         margin-top:55px;
         margin-bottom: 87px;;
-        margin-left:35px;
-        margin-right: 35px;
+        margin-left:20%;
+        margin-right: 20%;
         background: #0CB7F2 ;
         border: 1px solid #000000;
         border-radius: 20px;
+        box-shadow: 5px 5px 9px 3px rgb(212, 211, 211);
         display: flex;
         align-items: center;
     }
@@ -99,7 +100,7 @@ body{
     }
 }
 
-@media(min-width:700px){
+@media(min-width:701px){
     h1{
         margin-top: 50px;
         text-align: center;
@@ -116,6 +117,7 @@ body{
         margin-right: 32%;
         background: #0CB7F2 ;
         border: 1px solid #000000;
+        box-shadow: 5px 5px 9px 3px rgb(212, 211, 211);
         border-radius: 20px;
         display: flex;
         align-items: center;
