@@ -40,7 +40,7 @@ body{
     }
 
 }
-@media(min-width:750px){
+@media(min-width:701px){
     section{
         width: 90%;
         height: 100%;
