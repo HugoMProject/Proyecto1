@@ -8,7 +8,7 @@ const session = require('express-session');
 const cookie = require('cookie-parser');
 const db = require("../models");
 const cors = require('cors')
-const port = process.env.PUERTO || 5000;
+const port = process.env.PORT || 5000;
 db.sequelize
   .sync()
   .then(() => {
