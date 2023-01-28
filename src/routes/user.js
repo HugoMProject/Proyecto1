@@ -14,7 +14,7 @@ router.get('/',checkCookie ,renderHomeView);
 
 router.get('/aboutUs', renderaboutUsView); 
 
-router.get('/tienda',  renderTiendaView);
+router.get('/shop',  renderTiendaView);
 
 router.get('/details-product', renderDetailsProduct);
 
