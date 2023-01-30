@@ -159,16 +159,19 @@
         text-decoration: none;
         text-transform: uppercase;
         color: black;
-        padding: 10px;   
+        padding: 6px;   
     }
     header nav ul li a:hover{
         background-color: #014ba0;
         color:white;
-        padding: 10px;
+        padding: 6px;
         transition: all 0.5s;   
     }
     header nav div{
-        width: 100%;
+        width: 80%;
+    }
+    header nav div a {
+        margin-left: 15%;
     }
     header nav div button{
         cursor: pointer;
@@ -178,8 +181,8 @@
         border: solid #014ba0 2px;
         border-radius: 30px;
         padding: 7px;
-        padding-right:30px ;
-        padding-left:30px ;
+        padding-right:20px ;
+        padding-left:20px ;
     }
     header nav div button a {
         text-decoration: none;
