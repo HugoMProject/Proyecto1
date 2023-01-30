@@ -36,7 +36,7 @@ async function showProducts() {
     // Con un for of itero atravez de los elementos de shoppingCart y hago un Fetch a la API para buscar
     // el producto en la base de datos y pusheo los datos necesarios para el carrito como un objeto a "arrayProducts"
     for(let item of carrito) {
-        await fetch(`http://localhost:3000/api/getone/product/${item.id}`)
+        await fetch(`https://proyecto1-production.up.railway.app/api/getone/product/${item.id}`)
         .then(response => response.json())
         .then(data => {
             const { id, productName, price, description, img } = data;
@@ -149,7 +149,7 @@ async function showDetailproduct(){
   let see_more_details_product = JSON.parse(localStorage.getItem('see_more_details_product'));
     let show_Detail_products = [];
     for(let item of see_more_details_product){
-  await fetch(`http://localhost:3000/api/getone/product/${item.id}`)
+  await fetch(`https://proyecto1-production.up.railway.app/api/getone/product/${item.id}`)
           .then(res => res.json())
             .then(data=>{
               const {productName, price, description, img } = data;
@@ -191,7 +191,7 @@ async function showProductsCartInStore() {
   // Iteramos todos los productos del carrito en localStorage y creamos una card por producto
   // con sus respectivos datos
   for(let item of carrito) {
-    await fetch(`http://localhost:3000/api/getone/product/${item.id}`)
+    await fetch(`https://proyecto1-production.up.railway.app/api/getone/product/${item.id}`)
       .then(response => response.json())
       .then(data => {
         const { id, productName, price, description, img } = data;
