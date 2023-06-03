@@ -1,16 +1,16 @@
 
 
-=====================E-COMMERCE SERVICIOS ESTRUCTURALES Y TECNOLOGICOS========================================
+# =====================E-COMMERCE SERVICIOS ESTRUCTURALES Y TECNOLOGICOS========================================
 
 
     HISTORIA
 
-La idea nace de una charla de negocio sobre los problemas que hay en los servicios de estructuras, luego de una larga charla nace la idea de brindar servicios, que puedan dar soluciones a estos problemas.
+## La idea nace de una charla de negocio sobre los problemas que hay en los servicios de estructuras, luego de una larga charla nace la idea de brindar servicios, que puedan dar soluciones a estos problemas.
 
     PRODUCTO
-el producto que vamos a ofrecer es el servicio como productos.
+### el producto que vamos a ofrecer es el servicio como productos.
 
-brindando soluciones estructurales y de analisis de datos para minimizar sus gastos y asi aumentar sus ganancias a largo plazo.
+### brindando soluciones estructurales y de analisis de datos para minimizar sus gastos y asi aumentar sus ganancias a largo plazo.
 
 
     PUBLICO OBJETIVO
